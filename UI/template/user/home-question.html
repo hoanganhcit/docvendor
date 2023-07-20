@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DocVendor</title>
+	<meta charset="utf-8">  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/home.css"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+	<style>
+		.layouts__RightColumn-v1luab-4.ui-draggable {
+			position: absolute; 
+		}
+		.layouts__RightColumn-v1luab-4.ui-draggable-handle .dv-layout {
+			min-height: 500px;
+		}
+		.layouts__RightColumn-v1luab-4 .close-draggable {
+			position: absolute;
+			z-index: 1;
+			display: inline-flex;
+			width: 30px;
+			height: 30px;
+			align-items: center;
+			justify-content: center;
+			font-size: 30px;
+			top: 5px;
+			right: 5px;
+			background: rgba(255, 255, 255, 0.2);
+			border-radius: 4px;
+			opacity: 0;
+			visibility: hidden;
+		} 
+
+		.layouts__RightColumn-v1luab-4.ui-widget-content.ui-draggable-handle .close-draggable {
+			opacity: 1;
+			visibility: visible;
+		} 
+
+	</style>
+</head>
+<body  id="page-question">   
+	<div class="flat-sidenav sticky-on">
+		<div class="logo">
+			<a href="home.html"><div class="logo_bg"></div></a>
+		</div>  
+		<div class="sidenav-content"> 
+			<div class="logo-sidenav sidenav_notLogin" style="flex-direction: row;display: none;"> 
+				<button class="waves-effect waves-light btn btn-signin"><i class="material-icons">person</i> Sign In</button>
+				<button class="waves-effect waves-light btn btn-signup"><i class="material-icons">person_add</i> Sign Up</button>
+			</div>
+			<div class="logo-sidenav" style=""> 
+				<a href="javascript:;" class="business-image">
+					<img src="../../assets/images/admin/default-user.png">
+					<span>Business Name</span> 
+				</a>
+				<div class="droppdown-user animated fadeIn">
+					<ul>
+						<li><a href="home-profile.html">Profile</a></li>
+						<li><a href="home-document.html">Documents</a></li>
+						<li><a href="home-campaign.html">Campaign</a></li>
+						<li><a href="#">Log Out</a></li>
+					</ul>
+				</div>
+			</div> 
+			<div class="menu-sidenav">
+				<nav> 
+					<ul id="menu"> 
+						<li data-menuanchor="home">
+							<a href="home.html">Home</a>
+						</li>
+						<li data-menuanchor="about"  class="active">
+							<a href="about-us.html">About Us</a>
+						</li>
+						<li data-menuanchor="business">
+							<a href="business.html">Business</a>
+						</li>  
+					</ul> 
+				</nav>  
+			</div> 
+		</div>
+	</div>   
+	<div id="homepage" class="fullpage-wrapper"> 
+		<div class="layouts__Wrapper-v1">
+			<div class="sidenav_qs">
+				<div class="header-action">
+					<a href="#" download="" class="download-file tooltipped" data-position="bottom" data-tooltip="Download File"><i class="material-icons">file_download</i></a>
+					<a href="#" class="print-file tooltipped" data-position="bottom" data-tooltip="Print File"><i class="material-icons">print</i></a>
+					<a href="javascript:;" class=" tooltipped compare_width" data-position="bottom" data-tooltip="Fullscreen Question"><i class="material-icons">compare_arrows</i></a>  
+				</div>
+			</div>
+			<div class="layouts__LeftColumn-v1luab-3">
+				<div class="responsive-wrapper"> 
+					<img src="../../assets/images/user/pdf_1.png">
+				</div> 
+			</div> 
+			<div class="layouts__RightColumn-v1luab-4 after-hide" >
+				<a href="javascript:;" class="close-draggable" >&times;</a>
+				<div class="dv-layout dv-us-background">
+					<div class="dv-layout-q-start">
+						<div class="title-start">Docvendor</div>
+						<div class="desc-text">
+							<span>Bạn hãy bắt đầu với các câu hỏi của mình</span>
+							<span>Hãy trả lời hết các câu hỏi được đưa ra</span>
+						</div>
+						<div class="option-st">
+							<button class="waves-effect waves-light btn blue lighten-2 go-start">Ok, let's go</button>
+						</div>
+					</div>
+					<div class="dv-layout-q" style="display: none;">
+						<div class="dv-q_content">
+							<div class="dv-title-qs">
+								<div class="qs-ic">
+									<span class="qs-stt">1</span>
+									<span class="material-icons">arrow_forward</span>
+								</div>
+								<div class="stkv-qa-block_title"><span>Let's get going.</span> Đây là câu hỏi thứ nhất . Bạn tên là gì?</div>
+							</div>
+							<div class="dv-input-answer">
+								<input type="text" name="" placeholder="Type your answer here ...">
+							</div>
+						</div>
+						<div class="dv-q_content">
+							<div class="dv-title-qs">
+								<div class="qs-ic">
+									<span class="qs-stt">2</span>
+									<span class="material-icons">arrow_forward</span>
+								</div>
+								<div class="stkv-qa-block_title">Đây là câu hỏi thứ hai . Bạn muốn gì ?</div>
+							</div>
+							<div class="dv-input-answer">
+								<input type="text" name="" placeholder="Type your answer here ...">
+							</div>
+						</div>
+						<div class="dv-q_content">
+							<div class="dv-title-qs">
+								<div class="qs-ic">
+									<span class="qs-stt">3</span>
+									<span class="material-icons">arrow_forward</span>
+								</div>
+								<div class="stkv-qa-block_title">Đây là câu hỏi thứ ba . Bạn thích gì ?</div>
+							</div>
+							<div class="dv-input-answer">
+								<div class="select-qs"> 
+									<p>
+										<label>
+											<input type="checkbox" />
+											<span>Làm việc</span>
+										</label> 
+									</p>
+									<p>
+										<label>
+											<input type="checkbox" />
+											<span>Chơi game</span>
+										</label> 
+									</p>
+									<p>
+										<label>
+											<input type="checkbox" />
+											<span>Thể thao</span>
+										</label> 
+									</p>
+									<p>
+										<label>
+											<input type="checkbox" />
+											<span>Du lịch nhiều nơi khác </span>
+										</label> 
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="dv-q_content">
+							<div class="dv-title-qs">
+								<div class="qs-ic">
+									<span class="qs-stt">3</span>
+									<span class="material-icons">arrow_forward</span>
+								</div>
+								<div class="stkv-qa-block_title">Đây là câu hỏi thứ ba . Giới tính ?</div>
+							</div>
+							<div class="dv-input-answer">
+								<div class="select-qs"> 
+									<p>
+										<label>
+											<input type="radio" name="gender" />
+											<span>Male</span>
+										</label> 
+									</p> 
+									<p>
+										<label>
+											<input type="radio" name="gender" />
+											<span>Female</span>
+										</label> 
+									</p> 
+								</div>
+							</div>
+						</div> 
+						<div class="dv-q_content">
+							<div class="dv-title-qs">
+								<div class="qs-ic">
+									<span class="qs-stt">3</span>
+									<span class="material-icons">arrow_forward</span>
+								</div>
+								<div class="stkv-qa-block_title">Đây là câu hỏi thứ ba . Giới tính ?</div>
+							</div>
+							<div class="dv-input-answer">
+								<div class="select-qs"> 
+									<p>
+										<select>
+											<option value="" disabled selected>Choose your option</option>
+											<option value="1">Option 1</option>
+											<option value="2">Option 2</option>
+											<option value="3">Option 3</option>
+										</select>
+									</p>  
+								</div>
+							</div>
+						</div> 
+					</div>
+					<div class="dv-action"  style="display: none;"> 
+						<div style="width: 200px;">
+							<span>10% complete</span>
+							<div class="progress">
+								<div class="determinate" style="width: 10%"></div>
+							</div>
+						</div>
+						<div style="width: 200px;display: flex;justify-content: flex-end;">
+							<a href="#" class="prev"><i class="material-icons">keyboard_arrow_left</i></a>
+							<a href="#" class="next"><i class="material-icons">keyboard_arrow_right</i></a>
+							<a href="#" class="finish">Finish</a>
+						</div>
+					</div>
+					<div class="dv-layout-q-start finish"  style="display: none;">
+						<div class="bg-thanks"></div>
+						<div class="desc-text"> 
+							<span>Bạn đã hoàn thành hết các câu hỏi của chúng tôi . Tiếp tục khám phá cùng Docvendor </span>
+						</div>
+						<div class="option-st">
+							<button class="waves-effect waves-light btn blue lighten-2 go-start">Finish</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layouts__RightColumn-v1luab-4 ui-widget-content" >
+				<a href="javascript:;" class="close-draggable" >&times;</a>
+				<div class="dv-layout dv-us-background">
+					<div class="dv-layout-q-start">
+						<div class="title-start">Docvendor</div>
+						<div class="desc-text">
+							<span>Bạn hãy bắt đầu với các câu hỏi của mình</span>
+							<span>Hãy trả lời hết các câu hỏi được đưa ra</span>
+						</div>
+						<div class="option-st">
+							<button class="waves-effect waves-light btn blue lighten-2 go-start">Ok, let's go</button>
+						</div>
+					</div>
+					<div class="dv-layout-q" style="display: none;">
+						<div class="dv-q_content">
+							<div class="dv-title-qs">
+								<div class="qs-ic">
+									<span class="qs-stt">1</span>
+									<span class="material-icons">arrow_forward</span>
+								</div>
+								<div class="stkv-qa-block_title"><span>Let's get going.</span> Đây là câu hỏi thứ nhất . Bạn tên là gì?</div>
+							</div>
+							<div class="dv-input-answer">
+								<input type="text" name="" placeholder="Type your answer here ...">
+							</div>
+						</div>
+						<div class="dv-q_content">
+							<div class="dv-title-qs">
+								<div class="qs-ic">
+									<span class="qs-stt">2</span>
+									<span class="material-icons">arrow_forward</span>
+								</div>
+								<div class="stkv-qa-block_title">Đây là câu hỏi thứ hai . Bạn muốn gì ?</div>
+							</div>
+							<div class="dv-input-answer">
+								<input type="text" name="" placeholder="Type your answer here ...">
+							</div>
+						</div>
+						<div class="dv-q_content">
+							<div class="dv-title-qs">
+								<div class="qs-ic">
+									<span class="qs-stt">3</span>
+									<span class="material-icons">arrow_forward</span>
+								</div>
+								<div class="stkv-qa-block_title">Đây là câu hỏi thứ ba . Bạn thích gì ?</div>
+							</div>
+							<div class="dv-input-answer">
+								<div class="select-qs"> 
+									<p>
+										<label>
+											<input type="checkbox" />
+											<span>Làm việc</span>
+										</label> 
+									</p>
+									<p>
+										<label>
+											<input type="checkbox" />
+											<span>Chơi game</span>
+										</label> 
+									</p>
+									<p>
+										<label>
+											<input type="checkbox" />
+											<span>Thể thao</span>
+										</label> 
+									</p>
+									<p>
+										<label>
+											<input type="checkbox" />
+											<span>Du lịch nhiều nơi khác </span>
+										</label> 
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="dv-q_content">
+							<div class="dv-title-qs">
+								<div class="qs-ic">
+									<span class="qs-stt">3</span>
+									<span class="material-icons">arrow_forward</span>
+								</div>
+								<div class="stkv-qa-block_title">Đây là câu hỏi thứ ba . Giới tính ?</div>
+							</div>
+							<div class="dv-input-answer">
+								<div class="select-qs"> 
+									<p>
+										<label>
+											<input type="radio" name="gender" />
+											<span>Male</span>
+										</label> 
+									</p> 
+									<p>
+										<label>
+											<input type="radio" name="gender" />
+											<span>Female</span>
+										</label> 
+									</p> 
+								</div>
+							</div>
+						</div> 
+						<div class="dv-q_content">
+							<div class="dv-title-qs">
+								<div class="qs-ic">
+									<span class="qs-stt">3</span>
+									<span class="material-icons">arrow_forward</span>
+								</div>
+								<div class="stkv-qa-block_title">Đây là câu hỏi thứ ba . Giới tính ?</div>
+							</div>
+							<div class="dv-input-answer">
+								<div class="select-qs"> 
+									<p>
+										<select>
+											<option value="" disabled selected>Choose your option</option>
+											<option value="1">Option 1</option>
+											<option value="2">Option 2</option>
+											<option value="3">Option 3</option>
+										</select>
+									</p>  
+								</div>
+							</div>
+						</div> 
+					</div>
+					<div class="dv-action"  style="display: none;"> 
+						<div style="width: 200px;">
+							<span>10% complete</span>
+							<div class="progress">
+								<div class="determinate" style="width: 10%"></div>
+							</div>
+						</div>
+						<div style="width: 200px;display: flex;justify-content: flex-end;">
+							<a href="#" class="prev"><i class="material-icons">keyboard_arrow_left</i></a>
+							<a href="#" class="next"><i class="material-icons">keyboard_arrow_right</i></a>
+							<a href="#" class="finish">Finish</a>
+						</div>
+					</div>
+					<div class="dv-layout-q-start finish"  style="display: none;">
+						<div class="bg-thanks"></div>
+						<div class="desc-text"> 
+							<span>Bạn đã hoàn thành hết các câu hỏi của chúng tôi . Tiếp tục khám phá cùng Docvendor </span>
+						</div>
+						<div class="option-st">
+							<button class="waves-effect waves-light btn blue lighten-2 go-start">Finish</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>  
+	<script type="text/javascript" src="../../assets/js/jquery-ui.js"></script>   
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script>  
+	<script type="text/javascript" src="../../assets/js/jquery.fullPage.js"></script>   
+	<script type="text/javascript" src="../../assets/js/anime.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/home_custom.js"></script>  
+	<script> 
+		$(function() {
+			var images = ['bg_qs_1.jpg', 'bg_qs_2.jpg', 'bg_qs_3.jpg', 'bg_qs_4.jpg', 'bg_qs_6.jpg'];
+			$('.dv-us-background').css({'background': 'url(../../assets/images/user/background/' + images[Math.floor(Math.random() * images.length)] + ')'});
+			var images_thanks = ['thanks.png', 'thankyou.png'];
+			$('.bg-thanks').css({'background': 'url(../../assets/images/user/background/' + images_thanks[Math.floor(Math.random() * images_thanks.length)] + ') center no-repeat'});
+		});
+		$(document).ready(function(){
+			$('.menu-trigger').click(function(){
+				$('.flat-sidenav').toggleClass("open-sideNav"); 
+				$('.fullpage-wrapper').toggleClass("marginRight");
+				$('.menu-button').toggleClass("right300")
+			}); 
+
+			$('.business-image').click(function(){
+				$('.droppdown-user').slideToggle();  
+			});  
+
+			$('.go-start').click(function(){
+				$('.dv-layout-q-start').hide();  
+				$('.dv-layout-q, .dv-action').show();
+			});  
+
+
+			$(".dv-q_content").each(function(e) {
+				if (e != 0)
+					$(this).hide();
+			});
+
+			$(".next").click(function(){
+				if ($(".dv-q_content:visible").next().length != 0)
+					$(".dv-q_content:visible").next().show().prev().hide();
+				else {
+					$(".dv-q_content:visible").hide();
+					$(".dv-q_content:first").show();
+				}
+				return false;
+			});
+
+			$(".prev").click(function(){
+				if ($(".dv-q_content:visible").prev().length != 0)
+					$(".dv-q_content:visible").prev().show().next().hide();
+				else {
+					$(".dv-q_content:visible").hide();
+					$(".dv-q_content:last").show();
+				}
+				return false;
+			}); 
+
+ 
+
+			$('.ui-widget-content').hide();
+			$('.close-draggable').click(function() {  
+				$('.after-hide').show();    
+				$('.ui-widget-content').hide();
+				$('.layouts__LeftColumn-v1luab-3').removeClass("full-width");
+				$('.header-question').removeClass("full-width");   
+				$('.draggable').draggable({
+					disabled:true,
+					revert: true
+				});
+
+			}); 
+
+			$('.compare_width').click(function() {
+				$('.ui-widget-content').show();
+				$('.ui-widget-content').addClass('draggable');
+				$('.after-hide').hide();    
+				$('.layouts__LeftColumn-v1luab-3').addClass("full-width");
+				$('.header-question').addClass("full-width");  
+				$('.draggable').draggable({
+					disabled:false
+				});
+				$( ".draggable" ).resizable();
+				$(this).toggleClass('open');
+			}); 
+		}); 
+	</script>
+</body>
+</html>

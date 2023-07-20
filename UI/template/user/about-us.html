@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>DocVendor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../../assets/images/user/favicon.png" type="image/png" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/home.css">
+	<link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800"
+		rel="stylesheet">
+</head>
+
+<body style="background-color: #fff;">
+	<div class="modal-custom feedback-form">
+		<div class="modal-content animated fadeIn">
+			<div class="small-dialog  apply-popup">
+				<div class="small-dialog-headline">
+					<h2>Gửi đánh giá của bạn</h2>
+					<a href="javascript:;" class="mfp-close">&times;</a>
+				</div>
+				<div class="small-dialog-content">
+					<form class="job-manager-form" method="post">
+						<fieldset class="fieldset-candidate_name">
+							<label for="candidate_name">Full name</label>
+							<div class="field required-field">
+								<input type="text" class="input-text" name="candidate_name" id="candidate_name"
+									placeholder="" value="" maxlength="" required="">
+							</div>
+						</fieldset>
+						<fieldset class="fieldset-candidate_email">
+							<label for="candidate_email">Email address</label>
+							<div class="field required-field">
+								<input type="text" class="input-text" name="candidate_email" id="candidate_email"
+									placeholder="" value="" maxlength="" required="">
+							</div>
+						</fieldset>
+						<fieldset class="fieldset-application_message">
+							<label for="application_message">Message</label>
+							<div class="field required-field">
+								<textarea cols="20" rows="3" class="input-text" name="application_message"
+									id="application_message"
+									placeholder="Your cover letter/message sent to the employer" maxlength=""
+									required=""></textarea>
+							</div>
+						</fieldset>
+						<fieldset class="fieldset-application_attachment">
+							<label for="application_attachment">Upload Avatar <small>(optional)</small></label>
+							<div class="field_upload">
+								<label class="fake-upload-btn">
+									<input type="file" class="ws-file-upload input-text">
+									<div class="upload-btn"><i class="fa fa-upload" aria-hidden="true"></i> Browse</div>
+								</label>
+								<small class="description">Upload your avatar or any other relevant file. Max. file
+									size: 50 MB</small>
+							</div>
+						</fieldset>
+						<div class="send-app-btn">
+							<button class="btn btn-send">Send</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="flat-sidenav" style="background: transparent;box-shadow: none;top: 3rem;">
+		<div class="logo">
+			<a href="home.html">
+				<div class="">
+					<img src="../../assets/images/user/bg/logo.png" alt="">
+				</div>
+			</a>
+		</div>
+		<a href="javascript:;" class="mb-menu">
+			<span class="trigger"></span>
+		</a>
+		<div class="sidenav-content">
+			<div class="logo-sidenav sidenav_notLogin" style="flex-direction: row;display: none;">
+				<a href="#" class="waves-effect waves-light btn btn-signin"><i class="material-icons">person</i> Sign
+					In</a>
+				<a href="#services" class="waves-effect waves-light btn btn-signup nav-link"><i
+						class="material-icons">person_add</i> Sign Up</a>
+			</div>
+			<div class="logo-sidenav" style="display: none;">
+				<a href="javascript:;" class="business-image">
+					<img src="../../assets/images/admin/default-user.png">
+					<span>Business Name</span>
+				</a>
+				<div class="droppdown-user animated fadeIn">
+					<ul>
+						<li><a href="home-profile.html">Profile</a></li>
+						<li><a href="home-document.html">Documents</a></li>
+						<li><a href="home-campaign.html">Campaign</a></li>
+						<li><a href="#">Log Out</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="menu-sidenav">
+				<nav>
+					<ul id="menu">
+						<li data-menuanchor="home">
+							<a href="home.html">Home</a>
+						</li>
+						<li data-menuanchor="about" class="active">
+							<a href="about-us.html">About Us</a>
+						</li>
+						<li data-menuanchor="business">
+							<a href="business.html">For Business</a>
+						</li>
+						<li data-menuanchor="business">
+							<a href="solutions.html">Solutions</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="modal-custom md-bs-login">
+		<div class="md-si animated fadeIn w-4">
+			<div class="tsw-login-content">
+				<a href="javascript:;" class="close">&times;</a>
+				<div class="tsw-form_login">
+					<div class="tsw-form-layout">
+						<h4>Login</h4>
+						<div class="form-group">
+							<input id="email" type="text" class="validate" placeholder="Your Email">
+						</div>
+						<div class="form-group">
+							<input id="password" type="password" class="validate" placeholder="Password">
+						</div>
+						<div class="remember_me">
+							<label>
+								<input name="user[remember_me]" type="hidden" value="0"><input type="checkbox" value="1"
+									name="user[remember_me]" id="user_remember_me">
+								<span>Remember me</span>
+							</label>
+						</div>
+						<div class="tsw-forgot">
+							<a href="ad_forgotpassword.html">Forgot your password?</a>
+							<a href="/users/confirmation/new">Didn't receive confirmation instructions?</a>
+						</div>
+						<div class="tsw-button">
+							<button class="btn-tsw_main waves-effect waves-light red">Login</button>
+						</div>
+						<div class="or-social"><span>or</span></div>
+						<div class="social-lg">
+							<a href="#" class="target_fb"><i class="fas fa-facebook"></i> Sign in with Facebook</a>
+							<a href="#" class="target_gg"><i class="fas fa-google-plus"></i> Sign in with Google</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="breadcroumb-area">
+		<div class="container">
+			<div class="row">
+				<div class="col col-md-12">
+					<div class="content text-center pdt-0">
+						<div class="h2 mb-0">About Us</div>
+						<div class="breadcroumb-nav">
+							<div class="nav-wrapper">
+								<div class="col s12">
+									<a href="#!" class="breadcrumb">Home</a>
+									<a href="#!" class="breadcrumb">About Us</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="hero-section-solution">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="page-section__column page-section__column--primary">
+						<div class="title-effect title-effect-2">
+							<div class="ellipse"></div> <i class="fa fa-info"></i>
+						</div>
+						<div class="section-title">eSignatures are just the beginning</div>
+						<div class="text-p">
+							<p>Welcome to DocVendor, the leading provider of advanced e-signature solutions powered by
+								facial recognition technology. With our cutting-edge platform, we are revolutionizing
+								the way businesses securely authenticate and streamline their digital document signing
+								processes.
+							</p>
+							<p>At DocVendor powered by Docerfy, we are passionate about delivering innovative solutions
+								that combine convenience and enhanced security. Our team of experts has leveraged the
+								power of facial recognition technology to develop an advanced e-signature tool that
+								ensures the authenticity and integrity of every signature..
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="page-section__column page-section__column--illustration">
+						<div class="hero-image-wrapper">
+							<div class="tronix-image">
+								<img src="../../assets/images/user/bg/img-2-1.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="hero-section-solution" style="padding-top: 70px">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="page-section__column page-section__column--illustration">
+						<div class="hero-image-wrapper image-part">
+							<div class="">
+								<img src="../../assets/images/user/01.png" alt="">
+								<div class="anim">
+									<img src="../../assets/images/user/bg/pattern.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="page-section__column page-section__column--primary" style="padding-left: 5rem;">
+						<div class="section-title mb-4">
+							<div class="title-effect title-effect-2">
+								<div class="ellipse"></div> <i class="fa fa-info"></i>
+							</div>
+							<h2>Our Approach</h2>
+						</div>
+						<div class="text-p" style="margin-top: 70px;">
+							<p>We are committed to providing a seamless and
+								user-friendly e-signature experience. Our intuitive platform is designed to simplify the
+								signing process, saving you time and
+								effort. By incorporating facial recognition technology, we add an extra layer of
+								security and confidence to every signature, ensuring that the signer's identity is
+								verified and protected.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="page-section page-section--colored-tiles">
+		<div class="page-section__inner">
+			<h2 class="section-subtitle">Advanced functionality and security for mid-sized businesses and enterprises
+			</h2>
+			<div class="colored-tiles-cards row">
+				<div class="col s6 colored-tiles-card   colored-tiles-card--green  colored-tiles-card--02">
+					<div class="colored-tiles-card__wrapper">
+						<div class="colored-tiles-card__logo-wrapper">
+							<img class="colored-tiles-card__logo"
+								src="../../assets/images/user/bg/esign-wherever-you-are.svg" alt="">
+						</div>
+						<div class="colored-tiles-card__title">Security and Trust</div>
+						<div class="colored-tiles-card__description">At DocVendor, we understand the importance of data
+							security and privacy. Our e-signature
+							tool employs state-of-the-art encryption and security protocols to safeguard your
+							sensitive information. By utilizing facial recognition technology, we mitigate the risk
+							of identity fraud and unauthorized access, giving you peace of mind that your documents
+							are protected.</div>
+					</div>
+				</div>
+				<div class="col s6 colored-tiles-card colored-tiles-card--pink colored-tiles-card--04">
+					<div class="colored-tiles-card__wrapper">
+						<div class="colored-tiles-card__logo-wrapper">
+							<img class="colored-tiles-card__logo"
+								src="../../assets/images/user/bg/embed-esignatures.svg" alt="">
+						</div>
+						<div class="colored-tiles-card__title">Innovation and Technology</div>
+						<div class="colored-tiles-card__description">We are at the forefront of technological
+							advancements in the e-signature industry. Our
+							team continuously explores new possibilities and adopts emerging technologies to enhance
+							our platform's capabilities. By staying ahead of the curve, we provide you with the most
+							advanced features and functionalities to meet your evolving business needs.</div>
+					</div>
+				</div>
+				<div class="col s6 colored-tiles-card colored-tiles-card--blue colored-tiles-card--04">
+					<div class="colored-tiles-card__wrapper">
+						<div class="colored-tiles-card__logo-wrapper">
+							<img class="colored-tiles-card__logo"
+								src="../../assets/images/user/bg/embed-esignatures.svg" alt="">
+						</div>
+						<div class="colored-tiles-card__title">Customer Satisfaction</div>
+						<div class="colored-tiles-card__description">Your satisfaction is our priority. We are dedicated
+							to delivering exceptional customer service and support. Our knowledgeable team is available
+							to assist you at every stage, from initial setup to ongoing assistance. We value your
+							feedback and strive to continuously improve our platform based on your insights and
+							requirements.</div>
+					</div>
+				</div>
+				<div class="col s6 colored-tiles-card colored-tiles-card--info colored-tiles-card--04">
+					<div class="colored-tiles-card__wrapper">
+						<div class="colored-tiles-card__logo-wrapper">
+							<img class="colored-tiles-card__logo"
+								src="../../assets/images/user/bg/embed-esignatures.svg" alt="">
+						</div>
+						<div class="colored-tiles-card__title">Partnerships and Integrations</div>
+						<div class="colored-tiles-card__description">We believe in the power of collaboration. We have
+							forged strategic partnerships and integrations with industry-leading organizations to ensure
+							seamless integration with your existing systems and workflows. By working together, we
+							provide you with a comprehensive solution that enhances your document signing processes.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="testimonials-section section-padding bg-effect">
+		<div class="container ">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title mb-3">
+						<div class="title-effect title-effect-2">
+							<div class="ellipse"></div> <i class="fa fa-users"></i>
+						</div>
+						<h2>Trusted by</h2>
+					</div>
+				</div>
+				<div class="col col-lg-12">
+					<div class="container-sm">
+						<div class="dv-clients-wrapper owl-carousel owl-theme">
+							<div class="item">
+								<div class="dv-clients-logo">
+									<img
+										src="https://docvendor.com/assets/logo_company/Brampton-WebLogo-d3e54867d888f70fb103bce5124ea6970325829ce02af14a7670bbdec63d394b.png">
+								</div>
+							</div>
+							<div class="item">
+								<div class="dv-clients-logo">
+									<img
+										src="https://docvendor.com/assets/logo_company/Brampton-WebLogo-d3e54867d888f70fb103bce5124ea6970325829ce02af14a7670bbdec63d394b.png">
+								</div>
+							</div>
+							<div class="item">
+								<div class="dv-clients-logo">
+									<img
+										src="https://docvendor.com/assets/logo_company/Brampton-WebLogo-d3e54867d888f70fb103bce5124ea6970325829ce02af14a7670bbdec63d394b.png">
+								</div>
+							</div>
+							<div class="item">
+								<div class="dv-clients-logo">
+									<img
+										src="https://docvendor.com/assets/logo_company/Brampton-WebLogo-d3e54867d888f70fb103bce5124ea6970325829ce02af14a7670bbdec63d394b.png">
+								</div>
+							</div>
+							<div class="item">
+								<div class="dv-clients-logo">
+									<img
+										src="https://docvendor.com/assets/logo_company/Brampton-WebLogo-d3e54867d888f70fb103bce5124ea6970325829ce02af14a7670bbdec63d394b.png">
+								</div>
+							</div>
+							<div class="item">
+								<div class="dv-clients-logo">
+									<img
+										src="https://docvendor.com/assets/logo_company/Brampton-WebLogo-d3e54867d888f70fb103bce5124ea6970325829ce02af14a7670bbdec63d394b.png">
+								</div>
+							</div>
+							<div class="item">
+								<div class="dv-clients-logo">
+									<img
+										src="https://docvendor.com/assets/logo_company/Brampton-WebLogo-d3e54867d888f70fb103bce5124ea6970325829ce02af14a7670bbdec63d394b.png">
+								</div>
+							</div>
+						</div>
+						<a href="javascript:;" class="feedback-us mt-4" style="cursor: pointer;">Write your review about us!</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+	<section class="page-section page-section--free-trial" style="margin-top: 100px;">
+		<div class="page-section__inner">
+			<div class="page-section__row">
+				<div class="page-section__column">
+					<div class="free-trial free-trial__cta js-start-line">
+						<p class="mb-4">Join countless businesses who have embraced the efficiency, security, and
+							convenience of our e-signature tool. Experience the difference of digital document signing
+							with facial recognition technology.</p>
+						<p>Contact us today to learn more about how Docerefy can transform your signing processes and
+							empower your business.</p>
+					</div>
+				</div>
+				<div class="page-section__column">
+					<div id="animatedSignature">
+						<img src="../../assets/images/user/bg/signature-ft.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="contact-section-s3 section-padding" id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title mb-3">
+						<div class="title-effect title-effect-2">
+							<div class="ellipse"></div> <i class="fa fa-phone"></i>
+						</div>
+						<h2>Contact Us</h2>
+					</div>
+				</div>
+			</div>
+			<div class="contact-form">
+				<div role="form" class="wpcf7" id="wpcf7-f230-p7-o1" lang="en-US" dir="ltr">
+					<form>
+						<div class="col col-sm-6">
+							<div class="inputs">
+								<div>
+									<label for="name">Full Name <span>*</span></label>
+									<span class="wpcf7-form-control-wrap full-name"><input type="text" name="full-name"
+											value="" class="wpcf7-form-control form-control"></span>
+								</div>
+								<div>
+									<label for="email">Email Address <span>*</span></label>
+									<span class="wpcf7-form-control-wrap full-name"><input type="text" name="full-name"
+											value="" class="wpcf7-form-control form-control"></span>
+								</div>
+								<div>
+									<label for="phone">Phone No <span>*</span></label>
+									<span class="wpcf7-form-control-wrap full-name"><input type="text" name="full-name"
+											value="" class="wpcf7-form-control form-control"></span>
+								</div>
+							</div>
+						</div>
+						<div class="col col-sm-6">
+							<div>
+								<label for="message">Write <span>*</span></label>
+								<span class="wpcf7-form-control-wrap your-message"><textarea name="your-message"
+										class="wpcf7-form-control wpcf7-textarea form-control"></textarea></span>
+							</div>
+						</div>
+						<div class="col col-xs-12">
+							<div class="submit-btn">
+								<button type="submit">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="text-center">
+		<div class="bg-footer"></div>
+		<div class="container-footer">
+			<!-- Logo -->
+			<a class="logo" href="#"><img src="../../assets/images/user/bg/logo.png"></a>
+			<div class="social-network">
+				<ul>
+					<li>
+						<a href="#" class="fb"><i class="fas fa-facebook"></i></a>
+					</li>
+					<li>
+						<a href="#" class="tw"><i class="fas fa-twitter"></i></a>
+					</li>
+					<li>
+						<a href="#" class="linkedin"><i class="fas fa-linkedin"></i></a>
+					</li>
+					<li>
+						<a href="#" class="instagram"><i class="fas fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div>
+			<p>©2019 - Docvendor. All Rights Reserved.</p>
+
+		</div>
+	</footer>
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/owl.carousel.js"></script>
+	<script>
+		$(window).scroll(function () {
+			if ($(window).scrollTop() >= 100) {
+				$('.flat-sidenav').addClass('sticky-on');
+			}
+			else {
+				$('.flat-sidenav').removeClass('sticky-on');
+			}
+		});
+		$(document).ready(function () {
+			$('.mb-menu').click(function () {
+				$(this).toggleClass('open');
+				$('.sidenav-content').toggleClass('open');
+			});
+			$('.feedback-us').click(function () {
+				$('.feedback-form').addClass('open');
+				$('body').addClass('modal-open');
+			});
+			$('.mfp-close').click(function () {
+				$('.feedback-form').removeClass('open');
+				$('body').removeClass('modal-open');
+			});
+
+			$('.testimonial-carousel').owlCarousel({
+				items: 1,
+				autoplay: true,
+				loop: true,
+				margin: 0,
+				dots: false,
+				nav: false
+			});
+			$('.dv-clients-wrapper').owlCarousel({
+				margin: 10,
+				dots: false,
+				nav: false,
+				autoplay: true,
+				loop: true,
+				responsiveClass: true,
+				responsive: {
+					0: {
+						items: 2,
+						nav: true
+					},
+					600: {
+						items: 5,
+						nav: false
+					}
+				}
+			});
+
+		});
+
+	</script>
+</body>
+
+</html>

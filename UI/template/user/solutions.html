@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>DocVendor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../../assets/images/user/favicon.png" type="image/png" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/home.css">
+	<link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800"
+		rel="stylesheet">
+</head>
+
+<body style="background-color: #fff;">
+	<div class="flat-sidenav" style="background: transparent;box-shadow: none;top: 3rem;">
+		<div class="logo">
+			<a href="home.html">
+				<div class="">
+					<img src="../../assets/images/user/bg/logo.png" alt="">
+				</div>
+			</a>
+		</div>
+		<a href="javascript:;" class="mb-menu">
+			<span class="trigger"></span>
+		</a>
+		<div class="sidenav-content">
+			<div class="logo-sidenav sidenav_notLogin" style="flex-direction: row;display: none;">
+				<a href="#" class="waves-effect waves-light btn btn-signin"><i class="material-icons">person</i> Sign
+					In</a>
+				<a href="#services" class="waves-effect waves-light btn btn-signup nav-link"><i
+						class="material-icons">person_add</i> Sign Up</a>
+			</div>
+			<div class="logo-sidenav" style="display: none;">
+				<a href="javascript:;" class="business-image">
+					<img src="../../assets/images/admin/default-user.png">
+					<span>Business Name</span>
+				</a>
+				<div class="droppdown-user animated fadeIn">
+					<ul>
+						<li><a href="home-profile.html">Profile</a></li>
+						<li><a href="home-document.html">Documents</a></li>
+						<li><a href="home-campaign.html">Campaign</a></li>
+						<li><a href="#">Log Out</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="menu-sidenav">
+				<nav>
+					<ul id="menu">
+						<li data-menuanchor="home">
+							<a href="home.html">Home</a>
+						</li>
+						<li data-menuanchor="about">
+							<a href="about-us.html">About Us</a>
+						</li>
+						<li data-menuanchor="business">
+							<a href="business.html">For Business</a>
+						</li>
+						<li data-menuanchor="business"  class="active">
+							<a href="solutions.html">Solutions</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="modal-custom md-bs-login">
+		<div class="md-si animated fadeIn w-4">
+			<div class="tsw-login-content">
+				<a href="javascript:;" class="close">&times;</a>
+				<div class="tsw-form_login">
+					<div class="tsw-form-layout">
+						<h4>Login</h4>
+						<div class="form-group">
+							<input id="email" type="text" class="validate" placeholder="Your Email">
+						</div>
+						<div class="form-group">
+							<input id="password" type="password" class="validate" placeholder="Password">
+						</div>
+						<div class="remember_me">
+							<label>
+								<input name="user[remember_me]" type="hidden" value="0"><input type="checkbox" value="1"
+									name="user[remember_me]" id="user_remember_me">
+								<span>Remember me</span>
+							</label>
+						</div>
+						<div class="tsw-forgot">
+							<a href="ad_forgotpassword.html">Forgot your password?</a>
+							<a href="/users/confirmation/new">Didn't receive confirmation instructions?</a>
+						</div>
+						<div class="tsw-button">
+							<button class="btn-tsw_main waves-effect waves-light red">Login</button>
+						</div>
+						<div class="or-social"><span>or</span></div>
+						<div class="social-lg">
+							<a href="#" class="target_fb"><i class="fas fa-facebook"></i> Sign in with Facebook</a>
+							<a href="#" class="target_gg"><i class="fas fa-google-plus"></i> Sign in with Google</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="breadcroumb-area">
+		<div class="container">
+			<div class="row">
+				<div class="col col-md-12">
+					<div class="content text-center pdt-0">
+						<div class="h2 mb-0">Solutions</div>
+						<div class="breadcroumb-nav">
+							<div class="nav-wrapper">
+								<div class="col s12">
+									<a href="#!" class="breadcrumb">Home</a>
+									<a href="#!" class="breadcrumb">Solutions</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> 
+	<section class="hero-section-solution">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="page-section__column page-section__column--primary">
+						<div class="section-title">eSignature solution that works exactly how you need</div>
+						<div class="text-p">
+							<p>Our platform combines the convenience and simplicity of traditional e-signature tools
+								with the added layer of security provided by real-time facial recognition technology.
+							</p>
+							<p>Experience the future of secure document signing with our powerful e-signature solution.
+								Join countless individuals and businesses who have embraced our platform for efficient,
+								secure, and legally binding digital signatures.
+							</p>
+							<div class="mt-4 ">
+								<a href="#" class="btn theme-btn-s4 ml-0 btn-primary">Sign Up Today</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="page-section__column page-section__column--illustration">
+						<div class="intro-illustration">
+							<div class="intro-illustration__item">
+								<img src="../../assets/images/user/bg/photo.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="page-section page-section--colored-tiles" >
+        <div class="page-section__inner">
+            <h2 class="section-subtitle">Revolutionize your document signing process.</h2>
+            <div class="colored-tiles-cards row">
+                <div class="col s4 colored-tiles-card colored-tiles-card--yellow colored-tiles-card--01">
+                    <div class="colored-tiles-card__wrapper">
+                        <div class="colored-tiles-card__logo-wrapper">
+							<img class="colored-tiles-card__logo" src="../../assets/images/user/bg/secure-signing-is-our-priority.svg" alt="">
+						</div>
+                        <div class="colored-tiles-card__title">Advanced facial recognition feature</div>
+                        <div class="colored-tiles-card__description">You can rest assured that the signer's identity is verified and authenticated with each signature. This innovative technology analyzes unique facial features to ensure the person signing is who they claim to be, mitigating the risks of identity fraud and unauthorized access.</div>
+                    </div>
+                </div>
+                <div class="col s4 colored-tiles-card   colored-tiles-card--green  colored-tiles-card--02">
+                    <div class="colored-tiles-card__wrapper">
+                        <div class="colored-tiles-card__logo-wrapper">
+                            <img class="colored-tiles-card__logo" src="../../assets/images/user/bg/esign-wherever-you-are.svg" alt="">
+                        </div>
+                        <div class="colored-tiles-card__title">Simple operation and easy to use</div>
+                        <div class="colored-tiles-card__description">Our e-signature tool offers a seamless and user-friendly experience, allowing you to electronically sign documents with just a few clicks.</div>
+                    </div>
+                </div>
+                <div class="col s4 colored-tiles-card colored-tiles-card--pink colored-tiles-card--04">
+                    <div class="colored-tiles-card__wrapper">
+                        <div class="colored-tiles-card__logo-wrapper">
+							<img class="colored-tiles-card__logo" src="../../assets/images/user/bg/embed-esignatures.svg" alt="">
+						</div>
+                        <div class="colored-tiles-card__title">eSign from anywhere</div>
+                        <div class="colored-tiles-card__description">Whether you're signing contracts, agreements, or legal documents, our platform streamlines the entire process, saving you time and eliminating the hassle of printing, scanning, and mailing.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<div class="page-section page-section--features">
+		<div class="page-section__inner">
+			<h4 class="section-subtitle">Our most popular features</h4>
+			<section class="services-slider">
+				<div class="main-container">
+					<div class=" slider-main"> 
+						<div>
+							<img src="../../assets/images/user/bg/features.png">
+						</div>
+					</div>
+				</div>
+				<div class="nav-container">
+					<div class="slider-nav">
+						<ul class="collapsible ">
+							<li class="slide-navigation face-icon  active" style="width: 100%; display: inline-block;" href="#">
+								<h5 class="slide-navigation__title collapsible-header">Facial Recognition</h5>
+								<div class="slide-navigation__body collapsible-body">
+									<p class="slide-navigation__description">Our secure facial recognition technology ensures that only authorized individuals can sign documents, providing an additional layer of identity verification.</p>
+								</div>
+							</li>
+							<li class="slide-navigation encrytion-icon " style="width: 100%; display: inline-block;" href="#">
+								<h5 class="slide-navigation__title collapsible-header">Advanced Encryption</h5>
+								<div class="slide-navigation__body collapsible-body">
+									<p class="slide-navigation__description">All data and documents are encrypted to protect sensitive information from unauthorized access, ensuring your privacy and security.</p>
+								</div>
+							</li>
+							<li class="slide-navigation tracking-icon " style="width: 100%; display: inline-block;" href="#">
+								<h5 class="slide-navigation__title collapsible-header">Document Tracking</h5>
+								<div class="slide-navigation__body collapsible-body">
+									<p class="slide-navigation__description">Keep track of the signing progress and receive real-time notifications, ensuring you stay informed throughout the signing process.</p>
+								</div>
+							</li>
+							<li class="slide-navigation template-icon " style="width: 100%; display: inline-block;" href="#">
+								<h5 class="slide-navigation__title collapsible-header">Customizable Templates</h5>
+								<div class="slide-navigation__body collapsible-body">
+									<p class="slide-navigation__description">Create reusable templates for frequently used documents, saving time and ensuring consistency.</p>
+								</div>
+							</li>
+							<li class="slide-navigation audit-icon " style="width: 100%; display: inline-block;" href="#">
+								<h5 class="slide-navigation__title collapsible-header">Audit Trail</h5>
+								<div class="slide-navigation__body collapsible-body">
+									<p class="slide-navigation__description">Maintain a detailed record of every document's signing history, including timestamps and IP addresses, for compliance and legal purposes.</p>
+								</div>
+							</li>
+							<li class="slide-navigation integrations-icon " style="width: 100%; display: inline-block;" href="#">
+								<h5 class="slide-navigation__title collapsible-header">Integrations</h5>
+								<div class="slide-navigation__body collapsible-body">
+									<p class="slide-navigation__description">Seamlessly integrate with popular business tools and platforms, such as cloud storage services and project management software, for a smooth workflow.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div> 
+	<section class="page-section page-section--free-trial">
+        <div class="page-section__inner">
+            <div class="page-section__row">
+                <div class="page-section__column">
+                    <div class="free-trial free-trial__cta js-start-line">
+                        <p>At DocVendor powered by Docerfy, we understand the importance of trust and security when it comes to document signing. That's why our digital e-signature tool incorporates facial recognition technology, ensuring the highest level of authentication and peace of mind for all parties involved.</p>
+                    </div>
+					<div class="free-trial mt-4 free-trial__cta js-start-line">
+                        <a href="#" class="btn theme-btn btn-primary">Sign Up Today</a>
+                    </div>
+                </div>
+                <div class="page-section__column">
+                    <div id="animatedSignature">
+						<img src="../../assets/images/user/bg/signature-ft.png" alt="">
+					</div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<footer class="text-center">
+		<div class="bg-footer"></div>
+		<div class="container-footer">
+			<!-- Logo -->
+			<a class="logo" href="#"><img src="../../assets/images/user/bg/logo.png"></a>
+			<div class="social-network">
+				<ul>
+					<li>
+						<a href="#" class="fb"><i class="fas fa-facebook"></i></a>
+					</li>
+					<li>
+						<a href="#" class="tw"><i class="fas fa-twitter"></i></a>
+					</li>
+					<li>
+						<a href="#" class="linkedin"><i class="fas fa-linkedin"></i></a>
+					</li>
+					<li>
+						<a href="#" class="instagram"><i class="fas fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div>
+			<p>©2019 - Docvendor. All Rights Reserved.</p>
+
+		</div>
+	</footer>
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.collapsible').collapsible();
+			$('.nav-link').click(function (e) {
+				$('html, body').stop().animate({
+					scrollTop: $($(this).attr('href')).offset().top + 50
+				}, 400);
+				return false;
+			});
+			$('.mb-menu').click(function () {
+				$(this).toggleClass('open');
+				$('.sidenav-content').toggleClass('open');
+			});
+			$('.signin-md').click(function () {
+				$('body').addClass('modal-open');
+				$('.md-bs-login').addClass('open');
+				$('.header-shape-bg').addClass('blur');
+				$('.flat-sidenav').addClass('blur');
+				$('.page-title-pattern').addClass('blur');
+			});
+			$('.md-bs-login .close').click(function () {
+				$('body').removeClass('modal-open');
+				$('.md-bs-login').removeClass('open');
+				$('.header-shape-bg').removeClass('blur');
+				$('.flat-sidenav').removeClass('blur');
+				$('.page-title-pattern').removeClass('blur');
+			});
+		});
+		$(window).scroll(function () {
+			if ($(window).scrollTop() >= 100) {
+				$('.flat-sidenav').addClass('sticky-on');
+			}
+			else {
+				$('.flat-sidenav').removeClass('sticky-on');
+			}
+		});
+
+		// $('.slider-main').slick({
+		// 	slidesToShow: 1,
+		// 	slidesToScroll: 1,
+		// 	arrows: false,
+		// 	// speed: 500,
+		// 	// fade: true,
+		// 	// cssEase: 'linear',
+		// 	asNavFor: '.slider-nav',
+		// 	vertical: true
+		// });
+
+		// $('.slider-nav').slick({
+		// 	slidesToShow: 6,
+		// 	slidesToScroll: 1,
+		// 	asNavFor: '.slider-main',
+		// 	dots: true,
+		// 	centerMode: true,
+		// 	focusOnSelect: true,
+		// 	vertical: true
+		// });
+
+		// $(window).on('resize orientationchange', function() {
+		// 	if ($(window).width() > 1200) {
+		// 		$('.slider-nav').slick('unslick');
+		// 		$('.slider-nav').slick({
+		// 			slidesToShow: 4,
+		// 			asNavFor: '.slider-main',
+		// 			vertical: true,
+		// 			focusOnSelect: true,
+		// 			autoplay: false,
+		// 			centerMode: true
+		// 		});
+		// 	}
+		// });
+
+	</script>
+</body>
+
+</html>

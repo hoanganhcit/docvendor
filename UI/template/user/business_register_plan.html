@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DocVendor</title>
+	<meta charset="utf-8">  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/home.css"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+</head>
+<style>
+	.type_register label {
+		margin-right: 50px;
+		color: #000;
+		font-weight: 500;
+	}
+	.main-steps .container {
+		background: transparent;
+	}
+	.signup-content.step_one {
+		max-width: 700px;
+		width: 100%; 
+		position: relative;
+		margin: 0 auto;
+		background: #efeeff;
+		border-radius: 10px;
+	}
+
+	.signup-content.step_one .signup-form-conent {
+		width: 100%;
+	}
+	.signup-content.step_one .signup-form-conent .signup-form {
+		padding-top: 0;
+	}
+	.planselector__price svg {
+		width: 45px;
+		height: 45px;
+		fill: #3e3e3e;
+	}
+
+	.planselector--checked .planselector__price svg {
+		fill: #fff;
+	}
+
+	.planselector {
+		height: 140px;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column-reverse;
+	}
+
+	.planselector__label {
+		font-size: 16px;
+		display: block;
+	}
+
+	.planselector__price {
+		min-height: 60px;
+	}
+</style>
+<body>  
+	<div class="flat-sidenav" style="background: transparent;box-shadow: none;top: 3rem;">
+		<div class="logo">
+			<!-- <a href="home.html"><img src="../../assets/images/user/logo.png" class="logo_fixed"></a> -->
+		</div>  
+		<div class="sidenav-content"> 
+			<div class="logo-sidenav sidenav_notLogin" style="flex-direction: row;"> 
+				<a href="#" class="waves-effect waves-light btn btn-signin"><i class="material-icons">person</i> Sign In</a>
+				<a href="#services" class="waves-effect waves-light btn btn-signup nav-link"><i class="material-icons">person_add</i> Sign Up</a>
+			</div>
+			<div class="logo-sidenav" style="display: none;"> 
+				<a href="javascript:;" class="business-image">
+					<img src="../../assets/images/admin/default-user.png">
+					<span>Business Name</span> 
+				</a>
+				<div class="droppdown-user animated fadeIn">
+					<ul>
+						<li><a href="home-profile.html">Profile</a></li>
+						<li><a href="home-document.html">Documents</a></li>
+						<li><a href="home-campaign.html">Campaign</a></li>
+						<li><a href="#">Log Out</a></li>
+					</ul>
+				</div>
+			</div> 
+			<div class="menu-sidenav">
+				<nav> 
+					<ul id="menu"> 
+						<li data-menuanchor="home" class="active">
+							<a href="home.html">Home</a>
+						</li>
+						<li data-menuanchor="about">
+							<a href="about-us.html">About Us</a>
+						</li>
+						<li data-menuanchor="business">
+							<a href="business.html">For Business</a>
+						</li> 
+					</ul> 
+				</nav>  
+			</div> 
+		</div>
+	</div>    
+	<div class="main-steps services-package-section section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col col-xs-12">
+					<div class="package-grids"> 
+						<div class="grid"> 
+							<div class="pricing-header"> 
+								<h4 class="type">Free </h4> 
+								<div class="price"> 
+									<h3><span>$</span>0</h3> 
+								</div> 
+								<h5 class="duration">Per month</h5> 
+							</div> 
+							<div class="pricing-body"> 
+								<ul>
+									<li>5 forms</li>
+									<li>Searchability</li>
+									<li class="underline">Unique URL</li>
+									<li class="underline">Unlimited forms</li>
+									<li class="underline">Custom logo</li>
+									<li class="underline">Manage submitted form</li>
+									<li class="underline">Track form</li>
+									<li class="underline">Analytics</li>
+									<li class="underline">Collect payment</li>
+								</ul>
+								<a href="business_register_step2.html" class="theme-btn-s3">get package</a>
+							</div>
+						</div>
+						<div class="grid">
+							<div class="pricing-header">
+								<h4 class="type">Prime</h4>
+								<div class="price">
+									<h3><span>$</span>99</h3>
+								</div>
+								<h5 class="duration">Per month</h5>
+							</div>
+							<div class="pricing-body">
+								<ul>
+									<li>5 forms</li>
+									<li>Searchability</li>
+									<li>Unique URL</li>
+									<li>Unlimited forms</li>
+									<li>Custom logo</li>
+									<li>Manage submitted form</li>
+									<li>Track form</li>
+									<li class="underline">Analytics</li>
+									<li class="underline">Collect payment</li>
+								</ul>
+								<a href="business_register_step2.html" class="theme-btn-s3">get package</a>
+							</div>
+						</div>
+						<div class="grid">
+							<div class="pricing-header">
+								<h4 class="type">Enterprise</h4>
+								<div class="price">
+									<h3><span>$</span>199</h3>
+								</div>
+								<h5 class="duration">Per month</h5>
+							</div>
+							<div class="pricing-body">
+								<ul>
+									<li>5 forms</li>
+									<li>Searchability</li>
+									<li>Unique URL</li>
+									<li>Unlimited forms</li>
+									<li>Custom logo</li>
+									<li>Manage submitted form</li>
+									<li>Track form</li>
+									<li>Analytics</li>
+									<li>Collect payment</li>
+								</ul>
+								<a href="business_register_step2.html" class="theme-btn-s3">get package</a>
+							</div>
+						</div>
+					</div>
+					<div class="plan_wrapper"  style="display: none;"> 
+						<div class="add_plans_wrapper">
+							<div class="plans__header">
+								<div class="plans__header__text">Select your payment method</div>
+							</div>
+							<div class="row">
+								<div class="col s6 offset-s3 sign-up__plans">
+									<div class="form_signup_plans">
+										<div class="form_signup_plans_header">
+											<div class="planselector planselector--yearly planselector--checked">
+												<span class="planselector__radio active"></span>
+												<div class="planselector__label">Annual</div>
+												<div class="planselector__price annual_price">$1000<span class="planselector__subcopy saved"> - Save 15%</span></div> 
+												<div class="planselector__copy">One simple payment</div> 
+											</div>
+											<div class="planselector planselector--yearly">
+												<span class="planselector__radio"></span>
+												<div class="planselector__label">Enterprise</div>
+												<div class="planselector__price">$199<sup>month</sup></div>
+												<div class="planselector__copy">Recurring Billing</div> 
+											</div>
+										</div>
+										<div class="form_signup_plans_content">
+											<div class="form__input">
+												<div class="row">
+													<div class="input-field col s12">
+														<input id="plan_first_name" type="text" class="validate" placeholder="First Name"> 
+													</div> 
+												</div>
+												<div class="row">
+													<div class="input-field col s12">
+														<input id="plan_last_name" type="text" class="validate" placeholder="Last Name"> 
+													</div> 
+												</div>
+												<div class="row">
+													<div class="input-field col s12">
+														<input id="plan_email" type="text" class="validate" placeholder="Email"> 
+													</div> 
+												</div>
+												<div class="row">
+													<div class="input-field col s12">
+														<input id="plan_password" type="password" class="validate" placeholder="Password"> 
+													</div> 
+												</div>
+												<div class="your_billing_info">
+													<span>Your billing information</span>
+												</div>
+												<div class="row">
+													<div class="input-field col s12">
+														<input  type="text" class="validate" placeholder="Company(Optional)"> 
+													</div> 
+												</div>
+												<div class="row">
+													<div class="input-field col s12">
+														<input placeholder="Address" type="text" class="validate"> 
+													</div> 
+												</div>
+												<div class="row">
+													<div class="input-field col s12">
+														<input type="text" class="validate" placeholder="City"> 
+													</div> 
+												</div>
+												<div class="row">
+													<div class="input-field col s12">
+														<input type="text" class="validate" placeholder="Zipcode"> 
+													</div> 
+												</div>
+												<div class="row">
+													<div class="input-field col s12">
+														<input type="text" class="validate" placeholder="Country"> 
+													</div> 
+												</div>
+												<div class="row" style="margin-bottom: 15px">
+													<div class="input-field col s12">
+														<p style="text-align: left;">
+															<label>
+																<input type="checkbox">
+																<span>I agree to the Terms of Service</span>
+															</label>
+														</p>
+													</div> 
+												</div>
+												<div class="row">
+													<div class="input-field col s12" style="text-align:right;">
+														<a href="pay.html" class="waves-effect waves-light btn btn-blue">Complete Order</a>
+													</div> 
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>   
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>   
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script>     
+</body>
+</html>

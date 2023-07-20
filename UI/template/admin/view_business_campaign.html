@@ -1,0 +1,356 @@
+<html>
+<link rel="icon" href="images/favicon.png" sizes="16x16">
+<head>
+	<meta charset="utf-8">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="../../assets/css/animate.css">  
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-styles.css"> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+</head>
+<body> 
+	<div class="modal-custom modal-preview-doc">
+		<div class="modal-cs-content animated fadeInDown">
+			<div class="edit-content">
+				<div class="ct-body">
+					<button class="close">&times;</button>
+					<div class="form-group clearfix row">
+						<img src="../../assets/images/admin/pdf_1.png">
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<ul id="slide-out" class="side-nav fixed z-depth-2">
+		<li class="center no-padding">
+			<div class="header_sidenav white-text">
+				<div class="row">
+					<img width="150" src="../../assets/images/admin/logo.png" class=" responsive-img" />  
+				</div>
+			</div>
+		</li>  
+		<li class="center no-padding">
+			<div class="profile clearfix mb15">
+				<img src="../../assets/images/admin/bg.jpg" alt="admin">
+				<div class="group">
+					<h5 class="name">Business Name</h5> 
+				</div>
+			</div>
+		</li>
+		<ul class="collapsible main_menu_navigation" data-collapsible="accordion">
+			<li><a class="waves-effect" style="text-decoration: none;" href="business_dashboard.html"><i class="material-icons">tv</i> Dashboard</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_document.html"><i class="material-icons">folder_open</i> Documents</a></li>
+			<li class="active" id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_campaign.html"><i class="material-icons">domain</i> Campaigns</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_setting.html"><i class="material-icons">settings</i> Settings</a></li> 
+		</ul>
+	</ul>
+	<header>
+		<nav class="site-head" role="navigation">
+			<div class="nav-wrapper">
+				<a href="javascript:;" class="toggle-sidenav"><span></span></a> 
+				<a data-activates="slide-out" class="button-collapse show-on-" href="#!"><img style="width: 150px;margin-left: 20px;margin-top: 13px;" src="../../assets/images/admin/logo.png" /></a>
+
+				<ul class="right hide-on-med-and-down">
+					<li class="nav-item dropdown">
+						<a class="nav-link count-indicator dropdown-toggle" href="#">
+							<i class="material-icons bell">notifications_none</i>
+							<span class="count">4</span>
+						</a> 
+					</li>
+					<li class="nav-item dropdown d-none d-xl-inline-block">
+						<a class="nav-link dropdown-toggle userDropdown" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+							<span class="profile-text">Hello, Henry!</span>
+							<img class="img-xs rounded-circle" src="../../assets/images/admin/default-user.png" alt="Profile image">
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<div class="dropdown-nav animated fadeInDown">
+							<ul>
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul> 
+
+				<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+			</div>
+		</nav>  
+	</header>
+	<main>
+		<div class="content_main">   
+			<div class="nav-wrapper">
+				<a style="margin-left: 10px;" class="breadcrumb" href="#!">Business Campaign</a>
+				<a class="breadcrumb" href="#!">Create New Campaign</a> 
+				<div style="margin-right: 20px;" id="timestamp" class="right"></div>
+			</div>
+			<div class="row">  
+				<div class="col s12">
+					<div class="card create-form p2r">
+						<div class="title">Campaign Detail</div>
+						<div class="form">
+							<div class="card-4">
+								<div class="label">Name</div>
+								<span>Campaign Name</span>
+							</div>
+							<div class="card-4">
+								<div class="label">Date Start</div>
+								<span>15/11/2018</span>
+							</div>
+							<div class="card-4">
+								<div class="label">Date End</div>
+								<span>15/12/2018</span>
+							</div>
+							<div class="card-4">
+								<div class="label">Status</div>
+								<span>Active</span>
+							</div>
+						</div> 
+					</div>
+					<div class="card create-form p2r view_docs"> 
+						<div class="title">Documents</div>
+						<div class="list-doc">
+							<ul>
+								<li>
+									<div class="doc_01">
+										<span class="name_Doc">Càng níu giữ càng mất.xlsx <span class="num_docs">(50 Questions)</span></span> 
+									</div>
+								</li>
+								<li>
+									<div class="doc_01">
+										<span class="name_Doc">Càng níu giữ càng mất.docx <span class="num_docs">(30 Questions)</span></span>
+									</div>
+								</li>
+								<li>
+									<div class="doc_01">
+										<span class="name_Doc">Càng níu giữ càng mất.pdf <span class="num_docs">(25 Questions)</span></span>
+									</div>
+								</li>
+								<li>
+									<div class="doc_01">
+										<span class="name_Doc">Càng níu giữ càng mất.csv <span class="num_docs">(10 Questions)</span> </span>
+									</div>
+								</li>
+								<li>
+									<div class="doc_01">
+										<span class="name_Doc">Càng níu giữ càng mất.csv <span class="num_docs">(20 Questions)</span></span>
+									</div>
+								</li> 
+							</ul> 
+						</div>
+					</div>
+
+					<div class="card create-form p2r">  
+						<div class="table">
+							<table class="center-tb">
+								<thead>
+									<tr>
+										<th style="width: 10%">Name</th>
+										<th style="width: 25%">Email</th>
+										<th style="width: 35%">Documents</th>
+										<th style="width: 10">Complete</th>
+										<th style="width: 20%">Action</th>
+									</tr>
+								</thead> 
+								<tbody>
+									<tr>
+										<td>David</td>
+										<td>daviddegea@manutd.com</td>
+										<td colspan="3">
+											<div class="documents-field">
+												<div class="doc-li">
+													<span class="name_Doc">Càng níu giữ càng mất.docx</span>
+													<span class="desc-doc">Đây là mô tả của document ...</span>
+												</div>
+												<div class="progress-li">
+													<i>20% complete</i>
+													<div class="progress">
+														<div class="determinate" style="width: 20%"></div>
+													</div>
+												</div>
+												<div class="action-li">
+													<a href="javascript:;" class="doc-preview">View</a>
+													<a href="">Download</a>
+												</div>
+											</div>
+											<div class="documents-field">
+												<div class="doc-li">
+													<span class="name_Doc">Càng níu giữ càng mất.docx</span>
+													<span class="desc-doc">Đây là mô tả của document ...</span>
+												</div>
+												<div class="progress-li">
+													<i>50% complete</i>
+													<div class="progress">
+														<div class="determinate" style="width: 50%"></div>
+													</div>
+												</div>
+												<div class="action-li">
+													<a href="javascript:;" class="doc-preview">View</a>
+													<a href="">Download</a>
+												</div>
+											</div>
+											<div class="documents-field">
+												<div class="doc-li">
+													<span class="name_Doc">Càng níu giữ càng mất.docx</span>
+													<span class="desc-doc">Đây là mô tả của document ...</span>
+												</div>
+												<div class="progress-li">
+													<i>100% complete</i>
+													<div class="progress">
+														<div class="determinate" style="width: 100%"></div>
+													</div>
+												</div>
+												<div class="action-li">
+													<a href="javascript:;" class="doc-preview">View</a>
+													<a href="">Download</a>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>David</td>
+										<td>daviddegea@manutd.com</td>
+										<td colspan="3">
+											<div class="documents-field">
+												<div class="doc-li">
+													<span class="name_Doc">Càng níu giữ càng mất.docx</span>
+													<span class="desc-doc">Đây là mô tả của document ...</span>
+												</div>
+												<div class="progress-li">
+													<i>20% complete</i>
+													<div class="progress">
+														<div class="determinate" style="width: 20%"></div>
+													</div>
+												</div>
+												<div class="action-li">
+													<a href="javascript:;" class="doc-preview">View</a>
+													<a href="">Download</a>
+												</div>
+											</div> 
+											<div class="documents-field">
+												<div class="doc-li">
+													<span class="name_Doc">Càng níu giữ càng mất.docx</span>
+													<span class="desc-doc">Đây là mô tả của document ...</span>
+												</div>
+												<div class="progress-li">
+													<i>100% complete</i>
+													<div class="progress">
+														<div class="determinate" style="width: 100%"></div>
+													</div>
+												</div>
+												<div class="action-li">
+													<a href="javascript:;" class="doc-preview">View</a>
+													<a href="">Download</a>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>David</td>
+										<td>daviddegea@manutd.com</td>
+										<td colspan="3">
+											<div class="documents-field">
+												<div class="doc-li">
+													<span class="name_Doc">Càng níu giữ càng mất.docx</span>
+													<span class="desc-doc">Đây là mô tả của document ...</span>
+												</div>
+												<div class="progress-li">
+													<i>20% complete</i>
+													<div class="progress">
+														<div class="determinate" style="width: 20%"></div>
+													</div>
+												</div>
+												<div class="action-li">
+													<a href="javascript:;" class="doc-preview">View</a>
+													<a href="">Download</a>
+												</div>
+											</div> 
+										</td>
+									</tr>
+									<tr>
+										<td>David</td>
+										<td>daviddegea@manutd.com</td>
+										<td colspan="3">
+											<div class="documents-field">
+												<div class="doc-li">
+													<span class="name_Doc">Càng níu giữ càng mất.docx</span>
+													<span class="desc-doc">Đây là mô tả của document ...</span>
+												</div>
+												<div class="progress-li">
+													<i>90% complete</i>
+													<div class="progress">
+														<div class="determinate" style="width: 90%"></div>
+													</div>
+												</div>
+												<div class="action-li">
+													<a href="javascript:;" class="doc-preview">View</a>
+													<a href="">Download</a>
+												</div>
+											</div> 
+										</td>
+									</tr>
+									<tr>
+										<td>David</td>
+										<td>daviddegea@manutd.com</td>
+										<td colspan="3">
+											<div class="documents-field">
+												<div class="doc-li">
+													<span class="name_Doc">Càng níu giữ càng mất.docx</span>
+													<span class="desc-doc">Đây là mô tả của document ...</span>
+												</div>
+												<div class="progress-li">
+													<i>70% complete</i>
+													<div class="progress">
+														<div class="determinate" style="width: 70%"></div>
+													</div>
+												</div>
+												<div class="action-li">
+													<a href="javascript:;" class="doc-preview">View</a>
+													<a href="">Download</a>
+												</div>
+											</div> 
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+	</main>
+	<footer class="man-utd-black page-footer" style="background: #1a1a1a;padding-top: 0">
+		<div class="footer-copyright">
+			<div class="container" style="text-align: center;">
+				<span>&copy; Copyright docvendor 2018</span>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/main_admin.js"></script>   
+	<script> 
+		$('.add-doc').click(function() {
+			$('.modal-add-document').show();
+		});
+		$('.add-user').click(function() {
+			$('.modal-add-user').show();
+		});
+		$('.import-doc').click(function() {
+			$('.modal-import').show();
+		});
+		$('.doc-preview').click(function() {
+			$('body').css("overflow", "hidden");
+			$('.modal-preview-doc').show();
+		});
+		$('.close').click(function() {
+			$('body').removeAttr("style");
+			$('.modal-preview-doc').hide();
+		}); 
+		$('.action-button button').click(function() {
+			$('.modal-custom').hide();
+		});
+	</script>   
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DocVendor</title>
+	<meta charset="utf-8"> 
+	<link rel="icon" href="images/favicon.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/landing_styles.css"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+</head>
+<body>     
+	<div id="logoheader">
+		<img src="../../assets/images/user/logo.png">
+		<span>Total payment amount CAD 199.00</span>
+	</div>
+	<div class="panel__content help-section"> 
+		<div class="container">
+			<div class="hepl-content__layout" style="padding: 50px 20px">
+				<div class="row">
+					<div class="sign-up__plans">
+						<div class="form_pay"> 
+							<ul class="collapsible not-boxshadow">
+								<li class="active">
+									<div class="collapsible-header"><i class="icon_credit_card"></i><span>Credit Card</span></div>
+									<div class="collapsible-body">
+										<div class="row">
+											<div class="input-field col s12">
+												<select class="icons"> 
+													<option value="Visa" data-icon="../../assets/images/user/visa_small.png" class="left">Visa Card</option>
+													<option value="Master" data-icon="../../assets/images/user/mc_small.png" class="left">Master Card</option>
+													<option value="Amex" data-icon="../../assets/images/user/amex_small.png" class="left">Amex Card</option>
+												</select>
+												<label>Type Card</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="input-field col s12">
+												<input id="card_number" type="text" class="validate">
+												<label for="card_number">Card Number</label>
+											</div> 
+										</div>
+										<div class="row">
+											<div class="input-field col s12">
+												<input id="card_holder_name" type="text" class="validate">
+												<label for="card_holder_name">Card Holder Name</label>
+											</div> 
+										</div>
+										<div class="row">
+											<div class="input-field col s6">
+												<select class="expiry_month"> 
+													<option value="01">01</option>
+													<option value="02">02</option>
+													<option value="03">03</option>
+													<option value="04">04</option>
+													<option value="05">05</option>
+													<option value="06">06</option>
+													<option value="07">07</option>
+													<option value="08">08</option>
+													<option value="09">09</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option> 
+												</select>
+												<label>Card Expiry Month</label>
+											</div> 
+											<div class="input-field col s6">
+												<select class="expiry_year"> 
+													<option value="2018">2018</option>
+													<option value="2019">2019</option> 
+													<option value="2020">2020</option>
+													<option value="2021">2021</option>
+													<option value="2022">2022</option>
+													<option value="2023">2023</option>
+													<option value="2024">2024</option>
+													<option value="2025">2025</option>
+													<option value="2026">2026</option>
+													<option value="2027">2027</option>
+													<option value="2028">2028</option>
+													<option value="2029">2029</option>
+													<option value="2030">2030</option>
+													<option value="2031">2031</option>
+													<option value="2032">2032</option>
+													<option value="2033">2033</option>
+													<option value="2034">2034</option>
+													<option value="2035">2035</option>
+													<option value="2036">2036</option>
+													<option value="2037">2037</option>
+													<option value="2038">2038</option>
+													<option value="2039">2039</option>
+													<option value="2040">2040</option>
+												</select>
+												<label>Card Expiry Year</label>
+											</div> 
+										</div>
+										<div class="row">
+											<div class="input-field col s12">
+												<input id="card_security" type="text" class="validate">
+												<label for="card_security">CVC/CVV/CID</label>
+												<span class="material-icons info_cvc tooltipped" data-position="right" data-tooltip="Click here">info</span>
+												<div class="security_info">
+													<span class="close">&times;</span>
+													<div class="security_title">What is CVC/CVV/CID?</div>
+													<div class="security_para">
+													The Card Security Code (CVC/CVV/CID) is an additional three or four digit security code that is printed (not embossed) on the front or the back of your card.</div>
+													<div class="security_para"> The CVC/CVV/CID is an extra security measure to ensure that you are in possession of the card.</div>
+												</div>
+											</div> 
+										</div>
+										<div class="row">
+											<div class="input-field col s12">
+												<button class="waves-effect waves-light btn-large blue lighten-1">Payment</button>
+											</div> 
+										</div>
+									</div>
+								</li> 
+							</ul>
+						</div>
+					</div>   
+				</div>  
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>   
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script>
+	<script>  
+		$(document).ready(function(){  
+			$('select').formSelect();
+			$('.tooltipped').tooltip();
+			$('.collapsible').collapsible();  
+
+			$('.info_cvc').click(function(){ 
+				$('.security_info').toggleClass('show');
+			}); 
+			$('.security_info .close').click(function(){ 
+				$('.security_info').toggleClass('show');
+			}); 
+		}); 
+	</script>
+</body>
+</html>

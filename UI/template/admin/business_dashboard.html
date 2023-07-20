@@ -1,0 +1,215 @@
+<html>
+<link rel="icon" href="images/favicon.png" sizes="16x16">
+<head>
+	<meta charset="utf-8">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="../../assets/css/animate.css">  
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-styles.css"> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+</head>
+<body>
+	<div id="notifications_sidenav" class="sidenav notifications_sidenav side-shadow">
+		<div class="row">
+			<div class="table-clearfix">
+				<ul class="tabs">
+					<li class="tab col s6"><a class="active" href="#test1">New booking <span class="badge-nt">3</span></a></li>
+					<li class="tab col s6"><a href="#test2">Recently Viewed</a></li> 
+				</ul>
+			</div>
+			<div id="test1"> 
+				<div class="notifications-subcontainer"> 
+					<ul class="notifications with-dots full-height">
+						<li><a href="#">Booking inquiry for Queen and Spadina Room A</a></li>
+						<li><a href="#">Availability confirmed for Super Cool Room</a></li>
+						<li><a href="#">Availability declined for Missaussigua Training Room</a></li> 
+					</ul>
+				</div> 
+			</div>
+			<div id="test2">
+				<div class="notifications-subcontainer"> 
+					<ul class="notifications with-dots full-height">
+						<li><a href="#">Booking inquiry for Queen and Spadina Room A</a></li>
+						<li><a href="#">Availability confirmed for Super Cool Room</a></li>
+						<li><a href="#">Availability declined for Missaussigua Training Room</a></li>
+						<li><a href="#">Booking inquiry for Queen and Spadine Room A</a></li>
+						<li><a href="#">Availability declined for Missaussigua Training Room</a></li>
+					</ul>
+				</div> 
+			</div> 
+		</div>
+	</div>
+	<ul id="slide-out" class="side-nav fixed z-depth-2">
+		<li class="center no-padding">
+			<div class="header_sidenav white-text">
+				<div class="row">
+					<img width="150" src="../../assets/images/admin/logo.png" class=" responsive-img" />  
+				</div>
+			</div>
+		</li>  
+		<li class="center no-padding">
+			<div class="profile clearfix mb15">
+				<img src="../../assets/images/admin/bg.jpg" alt="admin">
+				<div class="group">
+					<h5 class="name">Business Name</h5> 
+				</div>
+			</div>
+		</li>
+		<ul class="main_menu_navigation">
+			<li><a class="waves-effect" style="text-decoration: none;" href="business_dashboard.html"><i class="material-icons">tv</i> Dashboard</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_document.html"><i class="material-icons">folder_open</i> Documents</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_campaign.html"><i class="material-icons">domain</i> Campaigns</a></li>
+			<li id="menu_admin" > 
+				<a class="waves-effect collapse-menu" href="javascript:;"><i class="material-icons">settings</i> Settings</a>
+				<div class="collapsible_menu"> 
+					<a class="waves-effect" style="text-decoration: none;" href="business_setting.html">Business Settings</a><a class="waves-effect" style="text-decoration: none;" href="settlement.html">Settlement</a>
+				</div> 
+			</li> 
+		</ul>
+	</ul>
+	<header>
+		<nav class="site-head" role="navigation">
+			<div class="nav-wrapper">
+				<a href="javascript:;" class="toggle-sidenav"><span></span></a> 
+				<a data-activates="slide-out" class="button-collapse show-on-" href="#!"><img style="width: 150px;margin-left: 20px;margin-top: 13px;" src="../../assets/images/admin/logo.png" /></a> 
+				<ul class="right hide-on-med-and-down">
+					<li class="nav-item dropdown">
+						<a class="nav-link count-indicator sidenav-trigger" href="#" data-target='notifications_sidenav'>
+							<i class="material-icons bell">notifications_none</i>
+							<span class="count">4</span>
+						</a>  
+					</li>
+					<li class="nav-item dropdown d-none d-xl-inline-block">
+						<a class="nav-link dropdown-toggle userDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+							<span class="profile-text">Hello, Henry!</span>
+							<img class="img-xs rounded-circle" src="../../assets/images/admin/default-user.png" alt="Profile image">
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<div class="dropdown-nav animated fadeInDown">
+							<ul>
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+
+				<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+			</div>
+		</nav>  
+	</header>
+	<main>
+		<div class="content_main">  
+			<div class="nav-wrapper">
+				<a style="margin-left: 10px;" class="breadcrumb" href="#!">Dashboard</a> 
+			</div>
+			<div class="row">
+				<div class="col s3">
+					<div class="card card-statistics">
+						<div class="card-body">
+							<div class="clearfix">
+								<div class="float-left">
+									<i class="material-icons text-danger icon-lg">description</i>
+								</div>
+								<div class="float-right">
+									<p class="mb-0 text-right">Documents</p>
+									<div class="fluid-container">
+										<h3 class="font-weight-medium text-right mb-0">60</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s3">
+					<div class="card card-statistics">
+						<div class="card-body">
+							<div class="clearfix">
+								<div class="float-left">
+									<i class="material-icons text-green icon-lg">assessment</i>
+								</div>
+								<div class="float-right">
+									<p class="mb-0 text-right">Campaigns</p>
+									<div class="fluid-container">
+										<h3 class="font-weight-medium text-right mb-0">30</h3>
+									</div>
+								</div>
+							</div> 
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">  
+				<div class="col s12">
+					<div class="card">
+						<div class="card-body">
+							<div class="nav-wrapper">
+								<a class="breadcrumb" href="#!">Campaign Active</a> 
+							</div>
+							<table class="table table-bordered table-upload-doc" style="background: #fff">
+								<thead>
+									<tr>
+										<th class="col-sm-4">Name</th>
+										<th>Status</th>
+										<th>Date Start</th>
+										<th>Date End</th> 
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="ng-binding">Document name</td>
+										<td class="ng-binding">Public</td>
+										<td class="ng-binding">20/10/2018</td> 
+										<td class="ng-binding">30/10/2018</td>
+									</tr>
+								</tbody>
+							</table> 
+						</div>
+					</div>
+				</div> 
+			</div> 
+			<div class="row">  
+				<div class="col s12">
+					<div class="card">
+						<div class="card-body">
+							<div class="nav-wrapper">
+								<a class="breadcrumb" href="#!">Documents Active</a> 
+							</div>
+							<table class="table table-bordered table-upload-doc" style="background: #fff">
+								<thead>
+									<tr>
+										<th class="col-sm-4">Name</th>
+										<th>Status</th>
+										<th>Date Start</th>
+										<th>Date End</th> 
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="ng-binding">Document name</td>
+										<td class="ng-binding">Public</td>
+										<td class="ng-binding">20/10/2018</td> 
+										<td class="ng-binding">30/10/2018</td>
+									</tr>
+								</tbody>
+							</table> 
+						</div> 
+					</div> 
+				</div>
+			</div> 
+		</div>
+	</main>
+	<footer class="man-utd-black page-footer" style="background: #1a1a1a;padding-top: 0">
+		<div class="footer-copyright">
+			<div class="container" style="text-align: center;">
+				<span>&copy; Copyright docvendor 2018</span>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/main_admin.js"></script>  
+</body>
+</html>

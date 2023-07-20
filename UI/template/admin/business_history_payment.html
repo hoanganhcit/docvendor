@@ -1,0 +1,145 @@
+<html>
+<link rel="icon" href="images/favicon.png" sizes="16x16">
+<head>
+	<meta charset="utf-8">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="../../assets/css/animate.css">  
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-styles.css"> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+</head>
+<body>   
+	<ul id="slide-out" class="side-nav fixed z-depth-2">
+		<li class="center no-padding">
+			<div class="header_sidenav white-text">
+				<div class="row">
+					<img width="150" src="../../assets/images/admin/logo.png" class=" responsive-img" />  
+				</div>
+			</div>
+		</li>  
+		<li class="center no-padding">
+			<div class="profile clearfix mb15">
+				<img src="../../assets/images/admin/bg.jpg" alt="admin">
+				<div class="group">
+					<h5 class="name">Business Name</h5> 
+				</div>
+			</div>
+		</li>
+		<ul class="collapsible main_menu_navigation" data-collapsible="accordion">
+			<li><a class="waves-effect" style="text-decoration: none;" href="business_dashboard.html"><i class="material-icons">tv</i> Dashboard</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_document.html"><i class="material-icons">folder_open</i> Documents</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_campaign.html"><i class="material-icons">domain</i> Campaigns</a></li>
+			<li class="active" id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_setting.html"><i class="material-icons">settings</i> Settings</a></li> 
+		</ul>
+	</ul>
+	<header>
+		<nav class="site-head" role="navigation">
+			<div class="nav-wrapper">
+				<a href="javascript:;" class="toggle-sidenav"><span></span></a> 
+				<a data-activates="slide-out" class="button-collapse show-on-" href="#!"><img style="width: 150px;margin-left: 20px;margin-top: 13px;" src="../../assets/images/admin/logo.png" /></a>
+
+				<ul class="right hide-on-med-and-down">
+					<li class="nav-item dropdown">
+						<a class="nav-link count-indicator dropdown-toggle" href="#">
+							<i class="material-icons bell">notifications_none</i>
+							<span class="count">4</span>
+						</a> 
+					</li>
+					<li class="nav-item dropdown d-none d-xl-inline-block">
+						<a class="nav-link dropdown-toggle userDropdown" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+							<span class="profile-text">Hello, Henry!</span>
+							<img class="img-xs rounded-circle" src="../../assets/images/admin/default-user.png" alt="Profile image">
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<div class="dropdown-nav animated fadeInDown">
+							<ul>
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul> 
+
+				<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+			</div>
+		</nav>  
+	</header>
+	<main>
+		<div class="content_main">  
+			<div class="row">  
+				<div class="col s12">
+					<div class="card">
+						<div class="card-body">
+							<div class="nav-wrapper">
+								<a class="breadcrumb" href="#!">History Payments</a> 
+							</div>
+							<table class="table table-bordered table-upload-doc" style="background: #fff">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Package</th>
+										<th>Payment methodt</th>
+										<th>Date of purchase</th>
+										<th>Expriration</th> 
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="ng-binding">1</td>
+										<td class="ng-binding">Price $99/month</td>
+										<td class="ng-binding">Monthly</td>
+										<td class="ng-binding">20/02/2019</td> 
+										<td class="ng-binding">20/11/2018</td>
+									</tr>
+									<tr>
+										<td class="ng-binding">2</td>
+										<td class="ng-binding">Price $99/month</td>
+										<td class="ng-binding">Monthly</td>
+										<td class="ng-binding">20/07/2018</td> 
+										<td class="ng-binding">20/10/2018</td>
+									</tr>
+									<tr>
+										<td class="ng-binding">3</td>
+										<td class="ng-binding">Price $99/month</td>
+										<td class="ng-binding">Monthly</td>
+										<td class="ng-binding">20/01/2018</td> 
+										<td class="ng-binding">20/05/2018</td>
+									</tr>
+								</tbody>
+							</table> 
+						</div> 
+					</div> 
+				</div>
+			</div> 
+		</div>
+	</main>
+	<footer class="man-utd-black page-footer" style="background: #1a1a1a;padding-top: 0">
+		<div class="footer-copyright">
+			<div class="container" style="text-align: center;">
+				<span>&copy; Copyright docvendor 2018</span>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/main_admin.js"></script>   
+	<script>  
+		$('.change-plan').click(function(){
+			$('body').css("overflow", "hidden"); 
+			$('.navigation').addClass("is-visible"); 
+			$('.navigation').css("transform", "translateY(200vh)") 
+		}); 
+		$('.navigation_close').click(function(){
+			$('.navigation').removeClass("is-visible"); 
+			$('body').removeAttr("style"); 
+			$('.navigation').removeAttr("style") 
+		}); 
+		$('.theme-btn-s3').click(function(){
+			$('.services-package-section').hide(); 
+			$('.add_plans_wrapper').show(); 
+		});
+	</script>   
+</body>
+</html>

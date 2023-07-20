@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DocVendor</title>
+	<meta charset="utf-8">  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/home.css"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+</head>
+<body> 
+	<div class="modal_custom modal_search">
+		<div class="modal_custom_content animated fadeIn"> 
+			<a href="javascript:;" class="close">&times;</a>
+			<div class="search_b">
+				<div class="input_b">
+					<input type="text" name="" placeholder="Search ...">
+					<i class="material-icons">search</i>
+				</div>
+				<button class="waves-effect waves-light btn btn-blue">Search</button>
+			</div>
+		</div>
+	</div>  
+	<div class="modal-uploadfile">
+		<div class="uploadfile_content animated fadeIn">
+			<a href="javascript:;" class="close">&times;</a>
+			<div class="form-upl">
+				<div class="form-upl-group">
+					<div class="col2">
+						<span>First Name</span>
+						<input type="text" name="">
+					</div>
+					<div class="col2">
+						<span>Last Name</span>
+						<input type="text" name="">
+					</div>
+				</div>
+				<div class="form-upl-group">
+					<div class="col2">
+						<span>Email</span>
+						<input type="text" name="">
+					</div>
+					<div class="col2">
+						<span>Phone</span>
+						<input type="text" name="">
+					</div>
+				</div>
+				<div class="form-upl-group">
+					<div class="col1">
+						<span>Document Name</span>
+						<input type="text" name="">
+					</div> 
+				</div>
+				<div class="form-upl-group">
+					<div class="col1">
+						<div class="form-card">
+							<div class="input_b" style="max-width: 100%;">
+								<label><i class="material-icons">file_upload</i> Choose a file</label>
+								<input type="file" name="" class="file-hidden"> 
+							</div> 
+						</div>
+					</div> 
+				</div>
+				<div class="form-upl-group form-upl-btn">
+					<div class="col1"> 
+						<button class="btn btn-cancel">Cancel</button>
+						<button class="btn btn-submit">Submit</button>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="flat-sidenav " style="background: transparent;box-shadow: none;top: 3rem;">
+		<div class="logo">
+			<a href="home.html"><div class="logo_bg"></div></a>
+		</div>  
+		<div class="sidenav-content"> 
+			<div class="logo-sidenav sidenav_notLogin" style="flex-direction: row;display: none;"> 
+				<button class="waves-effect waves-light btn btn-signin"><i class="material-icons">person</i> Sign In</button>
+				<button class="waves-effect waves-light btn btn-signup"><i class="material-icons">person_add</i> Sign Up</button>
+			</div>
+			<div class="logo-sidenav" style="display: none;"> 
+				<a href="javascript:;" class="business-image">
+					<img src="../../assets/images/admin/default-user.png">
+					<span>Business Name</span> 
+				</a>
+				<div class="droppdown-user animated fadeIn">
+					<ul>
+						<li><a href="home-profile.html">Profile</a></li>
+						<li><a href="home-document.html">Documents</a></li>
+						<li><a href="home-campaign.html">Campaign</a></li>
+						<li><a href="#">Log Out</a></li>
+					</ul>
+				</div>
+			</div> 
+			<div class="menu-sidenav">
+				<nav> 
+					<ul id="menu"> 
+						<li data-menuanchor="home">
+							<a href="home.html">Home</a>
+						</li>
+						<li data-menuanchor="about"  class="active">
+							<a href="about-us.html">About Us</a>
+						</li>
+						<li data-menuanchor="business">
+							<a href="business.html">Business</a>
+						</li>   
+					</ul> 
+				</nav>  
+			</div> 
+		</div>
+	</div>   
+	<div class="fullpage-wrapper"> 
+		<div class="layouts__Wrapper-v1"> 
+			<div class="layouts__RightColumn-v1luab">
+				<div class="uk-section section-hero uk-scrollspy-inview">
+					<div class="uk-container uk-container-small">  
+						<div class="hero-search">
+							<!-- Html Elements for Search -->
+							<div class="uk-position-relative">
+								<form class="uk-search uk-search-default uk-width-1-1">
+									<span class="uk-search-icon uk-icon fa fa-search"></span>
+									<input id="hero-search" class="uk-search-input" type="search" placeholder="Search for answers...">
+								</form>
+							</div>
+							<div class="upload-your_file">
+								<p><a href="javascript:;">Would you like to upload your file?</a></p> 
+							</div>
+						</div>
+					</div>
+				</div>
+<!-- 				<div class="page-title-pattern">
+					<img src="../../assets/images/user/11.png">
+				</div> -->
+				<div class="browse-section">
+					<div class="uk-container"> 
+						<h2 class="uk-text-center heading-hero-2">Browse Topics</h2>  
+						<p class="subtitle uk-text-lead uk-text-center">Get your answers fast, jump to most popular documentation content</p> 
+						<div class="sub_topic">
+							<ul>
+								<li>
+									<div class="dv-list_wiget" style="background: url(../../assets/images/user/bg/header.jpg) center no-repeat;background-size: cover;">
+										<div class="caption-overlay bg-gradient"></div>
+										<div class="title-wiget">
+											<span>Lorem ipsum dolor sit amet.docx</span>
+										</div>
+										<div class="dwiget_desc">
+											<span>When you are ready, just tell me which application form you would like to fill out by entering the name of your application in the text box below</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="dv-list_wiget"  style="background: url(../../assets/images/user/background/bg_7.jpg) center no-repeat;background-size: cover;">
+										<div class="caption-overlay bg-gradient"></div>
+										<div class="title-wiget">
+											<span>Lorem ipsum dolor sit amet.docx</span>
+										</div>
+										<div class="dwiget_desc">
+											<span>When you are ready, just tell me which application form you would like to fill out by entering the name of your application in the text box below</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="dv-list_wiget"  style="background: url(../../assets/images/user/background/bg_3.jpg) center no-repeat;background-size: cover;">
+										<div class="caption-overlay bg-gradient"></div>
+										<div class="title-wiget">
+											<span>Lorem ipsum dolor sit amet.docx</span>
+										</div>
+										<div class="dwiget_desc">
+											<span>When you are ready, just tell me which application form you would like to fill out by entering the name of your application in the text box below</span>
+										</div>
+									</div>
+								</li> 
+								<li>
+									<div class="dv-list_wiget" style="background: url(../../assets/images/user/bg/header.jpg) center no-repeat;background-size: cover;">
+										<div class="caption-overlay bg-gradient"></div>
+										<div class="title-wiget">
+											<span>Lorem ipsum dolor sit amet.docx</span>
+										</div>
+										<div class="dwiget_desc">
+											<span>When you are ready, just tell me which application form you would like to fill out by entering the name of your application in the text box below</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="dv-list_wiget"  style="background: url(../../assets/images/user/background/bg_7.jpg) center no-repeat;background-size: cover;">
+										<div class="caption-overlay bg-gradient"></div>
+										<div class="title-wiget">
+											<span>Lorem ipsum dolor sit amet.docx</span>
+										</div>
+										<div class="dwiget_desc">
+											<span>When you are ready, just tell me which application form you would like to fill out by entering the name of your application in the text box below</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="dv-list_wiget"  style="background: url(../../assets/images/user/background/bg_3.jpg) center no-repeat;background-size: cover;">
+										<div class="caption-overlay bg-gradient"></div>
+										<div class="title-wiget">
+											<span>Lorem ipsum dolor sit amet.docx</span>
+										</div>
+										<div class="dwiget_desc">
+											<span>When you are ready, just tell me which application form you would like to fill out by entering the name of your application in the text box below</span>
+										</div>
+									</div>
+								</li>  
+								<li>
+									<div class="dv-list_wiget" style="background: url(../../assets/images/user/bg/header.jpg) center no-repeat;background-size: cover;">
+										<div class="caption-overlay bg-gradient"></div>
+										<div class="title-wiget">
+											<span>Lorem ipsum dolor sit amet.docx</span>
+										</div>
+										<div class="dwiget_desc">
+											<span>When you are ready, just tell me which application form you would like to fill out by entering the name of your application in the text box below</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="dv-list_wiget"  style="background: url(../../assets/images/user/background/bg_7.jpg) center no-repeat;background-size: cover;">
+										<div class="caption-overlay bg-gradient"></div>
+										<div class="title-wiget">
+											<span>Lorem ipsum dolor sit amet.docx</span>
+										</div>
+										<div class="dwiget_desc">
+											<span>When you are ready, just tell me which application form you would like to fill out by entering the name of your application in the text box below</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="dv-list_wiget"  style="background: url(../../assets/images/user/background/bg_3.jpg) center no-repeat;background-size: cover;">
+										<div class="caption-overlay bg-gradient"></div>
+										<div class="title-wiget">
+											<span>Lorem ipsum dolor sit amet.docx</span>
+										</div>
+										<div class="dwiget_desc">
+											<span>When you are ready, just tell me which application form you would like to fill out by entering the name of your application in the text box below</span>
+										</div>
+									</div>
+								</li> 
+							</ul>
+						</div>  
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="text-center footer-search">
+		<div class="bg-footer"></div>
+		<div class="container-footer"> 
+			<!-- Logo -->
+			<a class="logo" href="#"><img src="../../assets/images/user/logo.png"></a>  
+			<div class="social-network">
+				<ul>
+					<li>
+						<a href="#" class="fb"><i class="fa fa-facebook"></i></a>
+					</li>
+					<li>
+						<a href="#" class="tw"><i class="fa fa-twitter"></i></a>
+					</li>
+					<li>
+						<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+					</li>
+					<li>
+						<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div> 
+			<p>©2019 - Docvendor. All Rights Reserved.</p>
+
+		</div>
+	</footer>
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>   
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script>  
+	<script type="text/javascript" src="../../assets/js/jquery.fullPage.js"></script>   
+	<script type="text/javascript" src="../../assets/js/anime.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/home_custom.js"></script>  
+	<script> 
+		$(document).ready(function(){
+			$('.menu-trigger').click(function(){
+				$('.flat-sidenav').toggleClass("open-sideNav"); 
+				$('.fullpage-wrapper').toggleClass("marginRight");
+				$('.menu-button').toggleClass("right300")
+			}); 
+
+			$('.business-image').click(function(){
+				$('.droppdown-user').slideToggle();  
+			}); 
+			$('.dv-list_docs li').click(function(){
+				$('.dv-list_docs li').removeClass("current");  
+				$(this).addClass("current");
+			});   
+			$('.upload-your_file a').click(function(){
+				$('body').addClass('modal-open');
+				$('.modal-uploadfile').show(); 
+			}); 
+			$('.btn-cancel, .close').click(function(){
+				$('body').removeClass('modal-open');
+				$('.modal-uploadfile').hide(); 
+			}); 
+			$('.ic_sm a').click(function(){
+				$('body').addClass('modal-open');
+				$('.modal_search').show(); 
+			}); 
+			$('.modal_search .close').click(function(){
+				$('body').removeClass('modal-open');
+				$('.modal_search').hide(); 
+			}); 
+		}); 
+	</script>
+</body>
+</html>

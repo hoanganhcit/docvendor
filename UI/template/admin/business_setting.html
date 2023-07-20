@@ -1,0 +1,372 @@
+<html>
+<link rel="icon" href="images/favicon.png" sizes="16x16">
+<head>
+	<meta charset="utf-8">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="../../assets/css/animate.css">  
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-styles.css"> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+</head>
+<body>  
+	<div class="navigation"> 
+		<div class="navigation_content"> 
+			<a href="#" id="menu-close" class="navigation_close"></a> 
+			<div class="logo-wrapper"> 
+				<img src="../../assets/images/user/logo.png" alt="Docvendor">
+			</div> 
+			<div class="menu-wrapper">
+				<div class="plan_wrapper">
+					<div class="row services-package-section">
+						<div class="col col-xs-12">
+							<div class="package-grids"> 
+								<div class="grid"> 
+									<div class="pricing-header"> 
+										<h4 class="type">Free </h4> 
+										<div class="price"> 
+											<h3><span>$</span>0</h3> 
+										</div> 
+										<h5 class="duration">Per month</h5> 
+									</div> 
+									<div class="pricing-body"> 
+										<ul>
+											<li>5 forms</li>
+											<li>Searchability</li>
+											<li class="underline">Unique URL</li>
+											<li class="underline">Unlimited forms</li>
+											<li class="underline">Custom logo</li>
+											<li class="underline">Manage submitted form</li>
+											<li class="underline">Track form</li>
+											<li class="underline">Analytics</li>
+											<li class="underline">Collect payment</li>
+										</ul>
+										<a href="#" data-target="add_plans" class="sidenav-trigger theme-btn-s3"> get package</a>
+									</div>
+								</div>
+								<div class="grid">
+									<div class="pricing-header">
+										<h4 class="type">Prime</h4>
+										<div class="price">
+											<h3><span>$</span>99</h3>
+										</div>
+										<h5 class="duration">Per month</h5>
+									</div>
+									<div class="pricing-body">
+										<ul>
+											<li>5 forms</li>
+											<li>Searchability</li>
+											<li>Unique URL</li>
+											<li>Unlimited forms</li>
+											<li>Custom logo</li>
+											<li>Manage submitted form</li>
+											<li>Track form</li>
+											<li class="underline">Analytics</li>
+											<li class="underline">Collect payment</li>
+										</ul>
+										<a href="#" data-target="add_plans" class="sidenav-trigger theme-btn-s3"> get package</a>
+									</div>
+								</div>
+								<div class="grid">
+									<div class="pricing-header">
+										<h4 class="type">Enterprise</h4>
+										<div class="price">
+											<h3><span>$</span>199</h3>
+										</div>
+										<h5 class="duration">Per month</h5>
+									</div>
+									<div class="pricing-body">
+										<ul>
+											<li>5 forms</li>
+											<li>Searchability</li>
+											<li>Unique URL</li>
+											<li>Unlimited forms</li>
+											<li>Custom logo</li>
+											<li>Manage submitted form</li>
+											<li>Track form</li>
+											<li>Analytics</li>
+											<li>Collect payment</li>
+										</ul>
+										<a href="#" data-target="add_plans" class="sidenav-trigger theme-btn-s3">get package</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="add_plans_wrapper" style="display: none;">
+						<div class="plans__header">
+							<div class="plans__header__text">Select your payment method</div>
+						</div>
+						<div class="row">
+							<div class="col s6 offset-s3 sign-up__plans">
+								<div class="form_signup_plans">
+									<div class="form_signup_plans_header">
+										<div class="planselector planselector--yearly planselector--checked">
+											<span class="planselector__radio active"></span>
+											<div class="planselector__label">Annual</div>
+											<div class="planselector__price annual_price">$1000<span class="planselector__subcopy saved"> - Save 15%</span></div> 
+											<div class="planselector__copy">One simple payment</div> 
+										</div>
+										<div class="planselector planselector--yearly">
+											<span class="planselector__radio"></span>
+											<div class="planselector__label">Enterprise</div>
+											<div class="planselector__price">$199<sup>month</sup></div>
+											<div class="planselector__copy">Recurring Billing</div> 
+										</div>
+									</div>
+									<div class="form_signup_plans_content">
+										<div class="form__input">
+											<div class="row">
+												<div class="input-field col s12">
+													<input id="plan_first_name" type="text" class="validate" placeholder="First Name"> 
+												</div> 
+											</div>
+											<div class="row">
+												<div class="input-field col s12">
+													<input id="plan_last_name" type="text" class="validate" placeholder="Last Name"> 
+												</div> 
+											</div>
+											<div class="row">
+												<div class="input-field col s12">
+													<input id="plan_email" type="text" class="validate" placeholder="Email"> 
+												</div> 
+											</div>
+											<div class="row">
+												<div class="input-field col s12">
+													<input id="plan_password" type="password" class="validate" placeholder="Password"> 
+												</div> 
+											</div>
+											<div class="your_billing_info">
+												<span>Your billing information</span>
+											</div>
+											<div class="row">
+												<div class="input-field col s12">
+													<input  type="text" class="validate" placeholder="Company(Optional)"> 
+												</div> 
+											</div>
+											<div class="row">
+												<div class="input-field col s12">
+													<input placeholder="Address" type="text" class="validate"> 
+												</div> 
+											</div>
+											<div class="row">
+												<div class="input-field col s12">
+													<input type="text" class="validate" placeholder="City"> 
+												</div> 
+											</div>
+											<div class="row">
+												<div class="input-field col s12">
+													<input type="text" class="validate" placeholder="Zipcode"> 
+												</div> 
+											</div>
+											<div class="row">
+												<div class="input-field col s12">
+													<input type="text" class="validate" placeholder="Country"> 
+												</div> 
+											</div>
+											<div class="row" style="margin-bottom: 15px">
+												<div class="input-field col s12">
+													<p style="text-align: left;">
+														<label>
+															<input type="checkbox">
+															<span>I agree to the Terms of Service</span>
+														</label>
+													</p>
+												</div> 
+											</div>
+											<div class="row">
+												<div class="input-field col s12" style="text-align:right;">
+													<a href="#" class="waves-effect waves-light btn btn-blue">Complete Order</a>
+												</div> 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>   
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>    
+		<div class="popup_background"></div>
+		<div class="popup_shape">
+			<svg class="popup-transition-shape" width="100%" height="100%" viewBox="0 0 1440 800" preserveAspectRatio="none">
+				<path class="popup-morphing-path" d="M-22.4 -87.7C-30.7,8.200000000000003,34.5,488.1,194.2,496c189.3,9.4,264.6 -232.7,431.3 -231c187.6,2,331.6,482.9,528.2,492c443.7,20.5,435.1 -828.5,368.6 -954.8C1455.9 -324.1,34.5 -746.7 -22.4 -87.7z"></path>
+			</svg>
+		</div> 
+	</div>
+	<ul id="slide-out" class="side-nav fixed z-depth-2">
+		<li class="center no-padding">
+			<div class="header_sidenav white-text">
+				<div class="row">
+					<img width="150" src="../../assets/images/admin/logo.png" class=" responsive-img" />  
+				</div>
+			</div>
+		</li>  
+		<li class="center no-padding">
+			<div class="profile clearfix mb15">
+				<img src="../../assets/images/admin/bg.jpg" alt="admin">
+				<div class="group">
+					<h5 class="name">Business Name</h5> 
+				</div>
+			</div>
+		</li>
+		<ul class="main_menu_navigation">
+			<li><a class="waves-effect" style="text-decoration: none;" href="business_dashboard.html"><i class="material-icons">tv</i> Dashboard</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_document.html"><i class="material-icons">folder_open</i> Documents</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_campaign.html"><i class="material-icons">domain</i> Campaigns</a></li>
+			<li id="menu_admin" > 
+				<a class="waves-effect collapse-menu" href="javascript:;"><i class="material-icons">settings</i> Settings</a>
+				<div class="collapsible_menu"> 
+					<a class="waves-effect" style="text-decoration: none;" href="business_setting.html">Business Settings</a><a class="waves-effect" style="text-decoration: none;" href="settlement.html">Settlement</a>
+				</div> 
+			</li> 
+		</ul>
+	</ul>
+	<header>
+		<nav class="site-head" role="navigation">
+			<div class="nav-wrapper">
+				<a href="javascript:;" class="toggle-sidenav"><span></span></a> 
+				<a data-activates="slide-out" class="button-collapse show-on-" href="#!"><img style="width: 150px;margin-left: 20px;margin-top: 13px;" src="../../assets/images/admin/logo.png" /></a>
+
+				<ul class="right hide-on-med-and-down">
+					<li class="nav-item dropdown">
+						<a class="nav-link count-indicator dropdown-toggle" href="#">
+							<i class="material-icons bell">notifications_none</i>
+							<span class="count">4</span>
+						</a> 
+					</li>
+					<li class="nav-item dropdown d-none d-xl-inline-block">
+						<a class="nav-link dropdown-toggle userDropdown" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+							<span class="profile-text">Hello, Henry!</span>
+							<img class="img-xs rounded-circle" src="../../assets/images/admin/default-user.png" alt="Profile image">
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<div class="dropdown-nav animated fadeInDown">
+							<ul>
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul> 
+
+				<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+			</div>
+		</nav>  
+	</header>
+	<main>
+		<div class="content_main">   
+			<div class="nav-wrapper">
+				<a style="margin-left: 10px;" class="breadcrumb" href="#!">Business Settings</a> 
+			</div>
+			<div class="row">  
+				<div class="col s5">
+					<div class="card create-form p2r"> 
+						<div class="form" style="flex-direction: column;"> 
+							<div class="card-flex update-logo">
+								<div class="justify-center">
+									<div class="label">Logo</div> 
+									<div class="change-logo"> 
+										<span>Change</span>
+										<input type="file" class="" name="">
+									</div>
+								</div> 
+								<div class="upload-logo"> 
+									<img src="../../assets/images/admin/bg.jpg">
+								</div>
+							</div>  
+						</div> 
+					</div> 
+				</div>
+				<div class="col s7">
+					<div class="card create-form p2r"> 
+						<div class="form" style="flex-direction: column;">
+							<div class="card-flex">
+								<div class="label">Business Name</div>
+								<input type="text" class="input" name="">
+							</div>  
+							<div class="card-flex">
+								<div class="label">Phone</div>
+								<input type="text" class="input" name="">
+							</div> 
+							<div class="card-flex card-plan">
+								<div class="card-plan-title">
+									<div class="label">Your Plan</div> 
+									<div><a href="javascript:;" class="change-plan"> Change</a></div>
+								</div>
+								<div class="table-plan">
+									<table>
+										<thead>
+											<tr>
+												<th>Package</th>
+												<th>Price $99/month</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Payment method</td>
+												<td>Monthly</td>
+											</tr>
+											<tr>
+												<td>Date of purchase</td>
+												<td>11/10/2018</td>
+											</tr>
+											<tr>
+												<td>Expriration</td>
+												<td>11/11/2018</td>
+											</tr>
+											<tr>
+												<td>Recurring Billing</td>
+												<td>
+													<div class="switch">
+														<label>
+															Off
+															<input type="checkbox">
+															<span class="lever"></span>
+															On
+														</label>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<a href="#">History payments</a>
+								</div>
+							</div>
+						</div> 
+					</div> 
+				</div>
+			</div> 
+		</div>
+	</main>
+	<footer class="man-utd-black page-footer" style="background: #1a1a1a;padding-top: 0">
+		<div class="footer-copyright">
+			<div class="container" style="text-align: center;">
+				<span>&copy; Copyright docvendor 2018</span>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/main_admin.js"></script>   
+	<script>  
+		 
+		$('.change-plan').click(function(){
+			$('body').css("overflow", "hidden"); 
+			$('.navigation').addClass("is-visible"); 
+			$('.navigation').css("transform", "translateY(200vh)") 
+		}); 
+		$('.navigation_close').click(function(){
+			$('.navigation').removeClass("is-visible"); 
+			$('body').removeAttr("style"); 
+			$('.navigation').removeAttr("style") 
+		}); 
+		$('.theme-btn-s3').click(function(){
+			$('.services-package-section').hide(); 
+			$('.add_plans_wrapper').show(); 
+		});
+	</script>   
+</body>
+</html>

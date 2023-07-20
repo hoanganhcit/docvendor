@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DocVendor</title>
+	<meta charset="utf-8">  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="stylesheet" type="text/css" href="../../assets/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/home.css"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+</head>
+<style> 
+	.login-wrappper {
+		display: flex;
+		width: 100%;
+		height: 100vh;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	} 
+	.tsw-login-content {
+		max-width: 400px; 
+		width: 100%;
+		position: relative;
+	}
+</style>
+<body style="background: linear-gradient(0deg, #d6aaf0, #aac2f0)">  
+	<div class="flat-sidenav" style="background: transparent;box-shadow: none;top: 3rem;">
+		<div class="logo">
+			<a href="home.html"><img src="../../assets/images/user/logo.png" class="logo_fixed"></a>
+		</div>   
+	</div> 
+	<div class="login-wrappper">
+		<div class="tsw-login-content">
+				<a href="javascript:;" class="close">&times;</a>
+				<div class="tsw-form_login"> 
+					<div class="tsw-form-layout">
+						<h4>Login</h4>
+						<div class="form-group"> 
+							<input id="email" type="text" class="validate" placeholder="Your Email"> 
+						</div>  
+						<div class="form-group"> 
+							<input id="password" type="password" class="validate" placeholder="Password"> 
+						</div> 
+						<div class="remember_me">
+							<label>
+								<input name="user[remember_me]" type="hidden" value="0"><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
+								<span>Remember me</span>
+							</label>
+						</div>
+						<div class="tsw-forgot">
+							<a href="ad_forgotpassword.html">Forgot your password?</a>
+							<a href="/users/confirmation/new">Didn't receive confirmation instructions?</a>
+						</div>
+						<div class="tsw-button">
+							<button class="btn-tsw_main waves-effect waves-light red">Login</button> 
+						</div>
+						<div class="or-social"><span>or</span></div>
+						<div class="social-lg">
+							<a href="#" class="target_fb"><i class="fa fa-facebook"></i> Sign in with Facebook</a>
+							<a href="#" class="target_gg"><i class="fa fa-google-plus"></i> Sign in with Google</a>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</div>
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>   
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script>    
+	<script type="text/javascript">
+		$(document).ready(function(){    
+			$('.collapsible').collapsible();    
+			$('.nav-link').click(function(e) {
+				$('html, body').stop().animate({
+					scrollTop: $( $(this).attr('href') ).offset().top + 50
+				}, 400);
+				return false;
+			});  
+			$('.mb-menu').click(function(){ 
+				$(this).toggleClass('open'); 
+				$('.sidenav-content').toggleClass('open'); 
+			});
+			$('.signin-md').click(function(){
+				$('body').addClass('modal-open'); 
+				$('.md-bs-login').addClass('open');
+				$('.header-shape-bg').addClass('blur');
+				$('.flat-sidenav').addClass('blur');
+				$('.page-title-pattern').addClass('blur');
+			});
+			$('.md-bs-login .close').click(function(){
+				$('body').removeClass('modal-open'); 
+				$('.md-bs-login').removeClass('open');
+				$('.header-shape-bg').removeClass('blur');
+				$('.flat-sidenav').removeClass('blur');
+				$('.page-title-pattern').removeClass('blur');
+			});
+		}); 
+		$(window).scroll(function(){ 
+			if ($(window).scrollTop() >= 100) {
+				$('.flat-sidenav').addClass('sticky-on'); 
+			}
+			else {
+				$('.flat-sidenav').removeClass('sticky-on'); 
+			}  
+		});
+
+	</script>
+</body>
+</html>

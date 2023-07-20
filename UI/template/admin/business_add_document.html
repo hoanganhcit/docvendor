@@ -1,0 +1,655 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="../../assets/css/animate.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="../../assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-styles.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+</head>
+<body>
+	<div id="edit-question"  class="modal-custom modal-edit-question">
+		<div class="modal-cs-content animated fadeInDown">
+			<div class="edit-content">
+				<form>
+					<div class="form_create">
+						<h4>Edit câu hỏi bằng việc kéo thả:</h4>
+						<div class="sl-question">
+							<div class="custom-qs">
+								<div class="title-flex">
+									<h5>This question :</h5>
+									<h5>All question :</h5>
+								</div>
+								<div class="dropQs">
+									<ul id="select_question" class="droptrue">
+										<li class="ui-state-default">Em tên gì? </li>
+										<li class="ui-state-default">Ăn cơm chưa em?</li>
+										<li class="ui-state-default">Đi xem phim nhé?</li>
+										<li class="ui-state-default">How old are you? </li>
+										<li class="ui-state-default">Where are you from?</li>
+									</ul>
+									<ul id="all_question" class="droptrue">
+										<li class="ui-state-default">What is your name?</li>
+										<li class="ui-state-default">Do you go to cenima with me?</li>
+										<li class="ui-state-highlight">What do you number phone?</li>
+										<li class="ui-state-highlight">Good morning?</li>
+										<li class="ui-state-highlight">How do you do?</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="form-group action-button" style="margin-top: 2rem">
+							<button class="waves-effect waves-light btn custom-ok">Save</button>
+							<button class="waves-effect waves-light btn custom-no">Cancel</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="preview_question" class="modal preview-modal">
+		<div class="modal-content">
+			<span class="modal-close close-icon">&times;</span>
+			<div class="nav_c qs_nav-modal"> 
+				<div class="lang-dc">
+					<div class="dv-lang">
+						<div class="lang-title">Language : </div>
+						<div class="lang-item">
+							<span class="flag-lang en"></span>
+							<span class="flag-lang fr"></span>
+							<span class="flag-lang vn"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="preview-dc">
+				<div class="aside-dc">
+					<div class="list-all-qs">
+						<div class="q-gr active">
+							<div class="q-title">
+								<span class="q-nb q-txt"><i class=" text-icon"></i> 1</span>
+								<span>Chú tên gì?</span>
+							</div> 
+							<div class="qs-text-equals">
+								<div class="sm-5txt">If value equals: 5</div>
+								<div class="qs-equals-gr">
+									<div class="q-e-rv"><span>1</span> How old are you?</div>
+									<div class="q-e-rv"><span>2</span> Where are you from?</div>
+									<div class="q-e-rv"><span>3</span> How do you do?</div>
+								</div>
+							</div>
+						</div>
+						<div class="q-gr">
+							<div class="q-title">
+								<span class="q-nb q-checkbox"><i class="fas fa-check-square"></i> 2</span>
+								<span>Select</span>
+							</div>
+							<div class="qs-option-slc">
+								<div class="sm-5txt">Option</div>
+								<div class="qs-equals-gr">
+									<div class="q-e-rv"><span>-</span> Option 1</div>
+									<div class="q-e-rv"><span>-</span> Option 2</div>
+									<div class="q-e-rv"><span>-</span> Option 3</div>
+								</div>
+							</div>
+							<div class="qs-text-equals">
+								<div class="sm-5txt">If choice</div>
+								<div class="qs-equals-gr">
+									<div class="q-e-rv"><span>1</span> How old are you?</div>
+									<div class="q-e-rv"><span>2</span> Where are you from?</div>
+									<div class="q-e-rv"><span>3</span> How do you do?</div>
+								</div>
+							</div>
+							<div class="qs-text-equals">
+								<div class="sm-5txt">If not choice</div>
+								<div class="qs-equals-gr">
+									<div class="q-e-rv"><span>1</span> How old are you?</div>
+									<div class="q-e-rv"><span>2</span> Where are you from?</div>
+									<div class="q-e-rv"><span>3</span> How do you do?</div>
+								</div>
+							</div>
+						</div>
+						<div class="q-gr">
+							<div class="q-title">
+								<span class="q-nb q-radio"><i class="fas fa-dot-circle"></i> 3</span>
+								<span>Radio</span>
+							</div>
+							<div class="qs-option-slc">
+								<div class="sm-5txt">Option</div>
+								<div class="qs-equals-gr">
+									<div class="q-e-rv"><span>-</span> Option 1</div>
+									<div class="q-e-rv"><span>-</span> Option 2</div>
+									<div class="q-e-rv"><span>-</span> Option 3</div>
+								</div>
+							</div>
+							<div class="qs-text-equals">
+								<div class="sm-5txt">If choice</div>
+								<div class="qs-equals-gr">
+									<div class="q-e-rv"><span>1</span> How old are you?</div>
+									<div class="q-e-rv"><span>2</span> Where are you from?</div>
+									<div class="q-e-rv"><span>3</span> How do you do?</div>
+								</div>
+							</div>
+							<div class="qs-text-equals">
+								<div class="sm-5txt">If not choice</div>
+								<div class="qs-equals-gr">
+									<div class="q-e-rv"><span>1</span> How old are you?</div>
+									<div class="q-e-rv"><span>2</span> Where are you from?</div>
+									<div class="q-e-rv"><span>3</span> How do you do?</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content-dc">
+					<img src="../../assets/images/admin/pdf.png">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="create_question" class="modal modal_create_question">
+		<div class="modal-content">
+			<h5 class="title-modal">Create new a question</h5>
+			<form>
+				<div class="form_create">
+					<div class="input-field col s12">
+						<input  placeholder="Enter title question" type="text" class="validate">
+					</div> 
+					<div class="input-field col s12">
+						<a href='#' class="dropdown-trigger typequestion" data-target='typequestion'><i class="fas fa-plus-circle"></i> Choose type question</a> 
+						<ul id="typequestion" class='dropdown-content typequestion-dropdown'>
+							<li><a href="#!"><i class="fas fa-text-width"></i> Text</a></li>
+							<li><a href="#!" class="checkbox-slt"><i class="far fa-check-square"></i> Checkbox</a></li> 
+							<li><a href="#!"><i class="far fa-dot-circle"></i> Radio</a></li>
+							<li><a href="#!"><i class="fas fa-check-double"></i> Select</a></li>
+							<li><a href="#!"><i class="fas fa-sync-alt"></i> Initial</a></li>
+							<li><a href="#!"><i class="fas fa-signature"></i> Signature</a></li> 
+							<li><a href="#!"><i class="fas fa-table"></i> Table</a></li>
+						</ul> 
+					</div>
+					<div class="checkbox_options">
+						<div class="title-option"><span class="far fa-check-square"></span> Create option</div>
+						<div class="option_">
+							<input type="text" name="">
+							<span class="del-option far fa-trash-alt"></span>
+						</div>
+						<a href="javascript:;" class="add_options_checkbox"><i class="fas fa-plus-circle"></i> Add a option</a>  
+						<div class="option_"> 
+							<div class="switch">
+								<label> 
+									<input type="checkbox">
+									<span class="lever"></span>
+								</label>
+							</div>
+							<span class="other-text">Other Option</span>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="bottom-modal">
+			<button class="modal-close waves-effect waves-light btn grey lighten-2">Cancel</button>
+			<button class="modal-close waves-effect waves-light btn blue lighten-2">Create</button>
+		</div>
+	</div>
+	<div id="translate-question" class="modal modal_translate_question">
+		<div class="modal-content">
+			<form>
+				<div class="form_create" id="translate_1">
+					<h4>Dịch các câu hỏi theo từng ngôn ngữ đã chọn :</h4>
+					<ul>
+						<li>
+							<div class="input-field form-transalte">
+								<span class="flag-lang en"></span>
+								<input type="text" class="validate" value="What is your name?">
+							</div>
+						</li>
+						<li>
+							<div class="input-field form-transalte">
+								<span class="flag-lang jp"></span>
+								<input type="text" class="validate" value="お名前は何ですか？">
+							</div>
+						</li>
+						<li>
+							<div class="input-field form-transalte">
+								<span class="flag-lang vn"></span>
+								<input type="text" class="validate" value="Chú tên gì?">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<button class="modal-close waves-effect waves-light btn blue lighten-2 save-translate">Save</button>
+		</div>
+	</div>
+	<div id="add_options" class="modal modal_create_question">
+		<div class="modal-content">
+			<form>
+				<div class="form_create">
+					<h4>Add New Option</h4>
+					<div class="input-field form-transalte">
+						<input type="text" id="label_option" class="validate" placeholder="Label">
+					</div>
+					<div class="input-field form-transalte">
+						<input type="text" id="value_option" class="validate" placeholder="Value">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<button class="modal-close waves-effect waves-light btn blue lighten-2">Create</button>
+		</div>
+	</div>
+	<ul id="slide-out" class="side-nav fixed z-depth-2">
+		<li class="center no-padding">
+			<div class="header_sidenav white-text">
+				<div class="row">
+					<img width="150" src="../../assets/images/admin/logo.png" class=" responsive-img" />
+				</div>
+			</div>
+		</li>
+		<li class="center no-padding">
+			<div class="profile clearfix mb15">
+				<img src="../../assets/images/admin/bg.jpg" alt="admin">
+				<div class="group">
+					<h5 class="name">Business Name</h5>
+				</div>
+			</div>
+		</li>
+		<ul class="collapsible main_menu_navigation" data-collapsible="accordion">
+			<li><a class="waves-effect" style="text-decoration: none;" href="business_dashboard.html"><i class="material-icons">tv</i> Dashboard</a></li>
+			<li class="active" id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_document.html"><i class="material-icons">folder_open</i> Documents</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_campaign.html"><i class="material-icons">domain</i> Campaigns</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_setting.html"><i class="material-icons">settings</i> Settings</a></li>
+		</ul>
+	</ul>
+	<header>
+		<nav class="site-head" role="navigation">
+			<div class="nav-wrapper">
+				<a href="javascript:;" class="toggle-sidenav"><span></span></a>
+				<ul class="right hide-on-med-and-down">
+					<li class="nav-item dropdown">
+						<a class="nav-link count-indicator dropdown-toggle" href="#">
+							<i class="material-icons bell">notifications_none</i>
+							<span class="count">4</span>
+						</a>
+					</li>
+					<li class="nav-item dropdown d-none d-xl-inline-block">
+						<a class="nav-link dropdown-toggle userDropdown" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+							<span class="profile-text">Hello, Henry!</span>
+							<img class="img-xs rounded-circle" src="../../assets/images/admin/default-user.png" alt="Profile image">
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<div class="dropdown-nav animated fadeInDown">
+							<ul>
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+		</nav>
+	</header>
+	<main>
+		<div class="content_main">
+			<div class="nav-wrapper">
+				<a style="margin-left: 20px;" class="breadcrumb" href="#!">Business</a>
+				<a class="breadcrumb" href="#!">Documents</a>
+				<a class="breadcrumb" href="#!">Document Name</a>
+				<a class="breadcrumb" href="#!">Add Question</a>
+				<div style="margin-right: 20px;" id="timestamp" class="right"></div>
+			</div>
+			<div class="row">
+				<div class="col s4">
+					<div class="dc-create_question rectanger">
+						<div class="dv-top dv-lang">
+							<div class="lang-title">Language : </div>
+							<div class="lang-item">
+								<span class="flag-lang en"></span>
+								<span class="flag-lang fr"></span>
+								<span class="flag-lang vn"></span>
+							</div>
+							<a href="javascript:;" class="add-lang">+</a>
+							<div class="select-lang">
+								<ul>
+									<li>English <span class="flag-lang en"></span></li>
+									<li>French <span class="flag-lang fr"></span></li>
+									<li>Japanese <span class="flag-lang jp"></span></li>
+									<li>Spainish <span class="flag-lang sp"></span></li>
+									<li>Vietnamese <span class="flag-lang vn"></span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="question-container">
+							<div class="card-qs">
+								<div class="card-qs-header">
+									<div class="qs-title"><input type="text" value="What is your name?"></div>
+									<div class="qs-bookmark">
+										<a href="javascript:;" class="remove material-icons">clear</a>
+										<a href="#translate-question" class="modal-trigger translate-question tooltipped" data-position="left" data-tooltip="Translate Question"><i class="tsl-icons"></i></a>
+										<a href="javascript:;" class="addrectanger tooltipped" data-position="right" data-tooltip="Edit Bookmark"><i class="bm-icons"></i></a>
+									</div>
+								</div>
+								<div class="qs-type">
+									<div class="type-title">Type: Text</div>
+								</div>
+								<div class="qs-equals">
+									<div class="equals-title">
+										<span>If value equals: <input type="text"></span>
+									</div>
+									<div style="margin-bottom: 5px">Then Show:
+										<a class="edit-list-qs" href="javascript:;"> Edit</a>
+									</div>
+									<div class="equals-list-qs">
+										<ul>
+											<li><a href="#">How old are you?</a></li>
+											<li><a href="#">Where are you from?</a></li>
+											<li><a href="#">How do you do?</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card-qs">
+								<div class="card-qs-header">
+									<div class="qs-title"><input type="text" value="What is your name?"></div>
+									<div class="qs-bookmark">
+										<a href="javascript:;" class="addcheckbox tooltipped" data-position="right" data-tooltip="Edit Bookmark"><i class="bm-icons"></i></a>
+										<a href="#translate-question" class="modal-trigger tooltipped" data-position="left" data-tooltip="Translate Question"><i class="tsl-icons"></i>
+										</a>
+									</div>
+								</div>
+								<div class="qs-type">
+									<div class="type-title">Then Show:</div>
+								</div>
+								<div class="qs-equals panel-group">
+									<div class="panel-default">
+										<div class="equals-title">
+											<span>If choice</span>
+										</div>
+										<div class="equals-list-qs">
+											<a class="modal-trigger edit-list-qs" href="#edit-question"> Edit</a>
+											<ul>
+												<li><a href="#">How old are you?</a></li>
+												<li><a href="#">Where are you from?</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="panel-default">
+										<div class="equals-title">
+											<span>If not choice</span>
+										</div>
+										<div class="equals-list-qs">
+											<a class="modal-trigger edit-list-qs" href="#edit-question"> Edit</a>
+											<ul>
+												<li><a href="#">How old are you?</a></li>
+												<li><a href="#">Where are you from?</a></li>
+												<li><a href="#">How do you do?</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="qs-equals panel-group">
+									<div class="panel-default">
+										<div class="equals-title">
+											<span>Options:</span>
+											<a href="#add_options" class="modal-trigger add-options material-icons">add</a>
+										</div>
+										<div class="equals-list-qs">
+											<ul class="option-panel option-list">
+												<li>
+													<div class="option-group equals-title"">
+														<span>Label: <input type="text"></span>
+														<span>Value: <input type="text"></span>
+													</div>
+												</li>
+												<li>
+													<div class="option-group equals-title"">
+														<span>Label: <input type="text"></span>
+														<span>Value: <input type="text"></span>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-qs">
+								<div class="card-qs-header">
+									<div class="qs-title"><input type="text" value="What is your name?"></div>
+									<div class="qs-bookmark">
+										<a href="javascript:;" class="addradio tooltipped" data-position="right" data-tooltip="Edit Bookmark"><i class="bm-icons"></i></a>
+										<a href="#translate-question" class="modal-trigger tooltipped" data-position="left" data-tooltip="Translate Question"><i class="tsl-icons"></i></a>
+									</div>
+								</div>
+								<div class="qs-type">
+									<div class="type-title">Type: Radio</div>
+								</div>
+								<div class="qs-equals panel-group">
+									<div class="panel-default">
+										<div class="equals-title">
+											<span>If value equals: "" <input type="text"></span>
+										</div>
+										<div class="equals-list-qs">
+											<a class="modal-trigger edit-list-qs" href="#edit-question"> Edit</a>
+											<ul>
+												<li>How old are you?</li>
+												<li>Where are you from?</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="qs-equals panel-group">
+									<div class="panel-default">
+										<div class="equals-title">
+											<span>Options:</span>
+											<a href="#add_options" class="modal-trigger add-options material-icons">add</a>
+										</div>
+										<div class="equals-list-qs">
+											<ul class="option-panel option-list">
+												<li>
+													<div class="option-group">
+														<span>Label: <input type="text"></span>
+														<span>Value: <input type="text"></span>
+													</div>
+													<div class="type-radio-bookmark">
+														<a href="javascript:;" class="remove material-icons">clear</a>
+														<a href="javascript:;" class="addradio tooltipped" data-position="right" data-tooltip="Edit Bookmark"><i class="bm-icons"></i></a>
+													</div>
+												</li>
+												<li>
+													<div class="option-group">
+														<span>Label: <input type="text"></span>
+														<span>Value: <input type="text"></span>
+													</div>
+													<div class="type-radio-bookmark">
+														<a href="javascript:;" class="remove material-icons">clear</a>
+														<a href="javascript:;" class="addradio tooltipped" data-position="right" data-tooltip="Edit Bookmark"><i class="bm-icons"></i></a>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-qs">
+								<div class="card-qs-header">
+									<div class="qs-title"><input type="text" value="What is your name?"></div>
+									<div class="qs-bookmark">
+										<a href="javascript:;" class="addrectanger tooltipped" data-position="right" data-tooltip="Edit Bookmark"><i class="bm-icons"></i></a>
+										<a href="#translate-question" class="modal-trigger tooltipped" data-position="left" data-tooltip="Translate Question"><i class="tsl-icons"></i></a>
+									</div>
+								</div>
+								<div class="qs-type">
+									<div class="type-title">Type: Select</div>
+								</div>
+								<div class="qs-equals panel-group">
+									<div class="panel-default">
+										<div class="equals-title">
+											<span>If value equals: "" <input type="text"></span>
+										</div>
+										<div class="equals-list-qs">
+											<a class="modal-trigger edit-list-qs" href="#edit-question"> Edit</a>
+											<ul>
+												<li>How old are you?</li>
+												<li>Where are you from?</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="qs-equals panel-group">
+									<div class="panel-default">
+										<div class="equals-title">
+											<span>Options:</span>
+											<a href="#add_options" class="modal-trigger add-options material-icons">add</a>
+										</div>
+										<div class="equals-list-qs">
+											<ul class="option-panel option-list">
+												<li>
+													<div class="option-group">
+														<span>Label: <input type="text"></span>
+														<span>Value: <input type="text"></span>
+													</div>
+												</li>
+												<li>
+													<div class="option-group">
+														<span>Label: <input type="text"></span>
+														<span>Value: <input type="text"></span>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="margin-top: 20px;display: flex;align-items: center;justify-content: space-between;">
+						<button class="waves-effect waves-light btn gd-blue-o">Complete</button>
+						<a class="waves-effect waves-light btn gd-blue modal-trigger" href="#create_question">Create Question</a>
+					</div>
+				</div>
+				<div class="col s8">
+					<div class="review-qs"><a href="#preview_question" class="modal-trigger waves-effect waves-light btn gd-blue">Review</a></div>
+					<div class="pdf-preview">
+						<img src="../../assets/images/admin/pdf_1.png" id="pdf_1">
+						<img src="../../assets/images/admin/pdf_2.png" id="pdf_2">
+						<img src="../../assets/images/admin/pdf_3.png" id="pdf_3">
+						<img src="../../assets/images/admin/pdf_4.png" id="pdf_4">
+						<img src="../../assets/images/admin/pdf_5.png" id="pdf_5">
+						<img src="../../assets/images/admin/pdf_6.png" id="pdf_6">
+						<img src="../../assets/images/admin/pdf_7.png" id="pdf_7">
+						<canvas id="file-img"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/fabric.js"></script>
+	<script type="text/javascript" src="../../assets/js/main_admin.js"></script>
+	<script>
+		$( function() {
+			$('.dropdown-trigger').dropdown();
+			$( "ul.droptrue" ).sortable({
+				connectWith: "ul"
+			});
+
+			$( "ul.dropfalse" ).sortable({
+				connectWith: "ul",
+				dropOnEmpty: false
+			});
+
+			$('.checkbox-slt').click(function() {
+				$('.checkbox_options').show();
+			});
+
+			$('.edit-list-qs').click(function() {
+				$('.modal-edit-question').show();
+			});
+			$('.q-gr').click(function() {
+				$('.q-gr').removeClass('active');
+				$(this).addClass('active');
+			});
+
+			$('.translate-question').click(function(){
+				$('#translate_1').appendTo("#translate");
+			});
+			$( "#select_question, #all_question" ).disableSelection(); 
+
+		});
+
+		$(document).ready(function() {
+
+			var canvas = new fabric.Canvas('file-img');
+			var json = '{"objects":[{"type":"rect","left":100,"top":100,"width":120,"height":30,"fill":"#ffe1e1","id":"doc_1"}]}'
+
+			canvas.loadFromJSON(json, canvas.renderAll.bind(canvas), function(object) {
+				fabric.log(object);
+			});
+
+			var height_pdf = $('#pdf_1').height() + $('#pdf_2').height() + $('#pdf_3').height() + $('#pdf_4').height() + $('#pdf_5').height() + $('#pdf_6').height() + $('#pdf_7').height();
+
+			var width_pdf = $('.pdf-preview img').width();
+
+			canvas.setHeight(height_pdf);
+			canvas.setWidth(width_pdf);
+
+			fabric.Object.prototype.set({
+				transparentCorners: false,
+				cornerColor: 'tomato',
+				cornerSize: 5
+			});
+
+			function objectAddedListener(ev) {
+				let target = ev.target;
+				console.log('left', target.left, 'top', target.top, 'width', target.width * target.scaleX, 'height', target.height, 'id', target.id);
+				canvas.includeDefaultValues = false;
+				fabric.log('JSON: ', canvas.toJSON(['id']));
+			}
+
+			function objectMovedListener(ev) {
+				let target = ev.target;
+				console.log('left', target.left, 'top', target.top, 'width', target.width * target.scaleX, 'height', target.height * target.scaleY, 'id', target.id);
+				canvas.includeDefaultValues = false;
+				fabric.log('JSON: ', canvas.toJSON(['id']));
+			}
+
+			canvas.on('object:added', objectAddedListener);
+			canvas.on('object:modified', objectMovedListener);
+
+
+			$('.addrectanger').click(function(){
+				var rect = new fabric.Rect({
+					width: 120, height: 30, fill: '#ffe1e1', top: 100, left: 100 });
+				canvas.add(rect);
+			});
+			$('.addcheckbox').click(function(){
+				var checkbox_rect = new fabric.Rect({
+					width: 30, height: 30, fill: '#ff6347', top: 100, left: 100 });
+				canvas.add(checkbox_rect);
+			});
+			$('.addradio').click(function(){
+				var radio_circle = new fabric.Circle({
+					radius: 30, fill: '#8BC34A', top: 100, left: 100 });
+				canvas.add(radio_circle);
+			});
+
+			$('.add-lang').click(function(){
+				$('.select-lang').slideToggle();
+			});
+
+		});
+
+	</script>
+</body>
+</html>

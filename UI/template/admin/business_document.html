@@ -1,0 +1,188 @@
+<html>
+<link rel="icon" href="images/favicon.png" sizes="16x16">
+<head>
+	<meta charset="utf-8">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="../../assets/css/animate.css">  
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-styles.css"> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+</head>
+<body>
+	<div class="modal-custom modal-delete">
+		<div class="modal-cs-content animated fadeInDown">
+			<div class="delete-dialog">
+				<p>Are you sure?</p>
+				<p>
+					<button class="waves-effect waves-light btn custom-ok">Yes</button>
+					<button class="waves-effect waves-light btn custom-no">No</button>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="modal-custom modal-edit">
+		<div class="modal-cs-content animated fadeInDown">
+			<div class="edit-content">
+				<div class="ct-body">
+					<div class="form-group clearfix row">
+						<div class="col s6">
+							<label>Document Name</label>
+							<input type="text" name="" value="Document Name" class="input-custom"> 
+						</div>
+						<div class="col s6">
+							<label>Status</label>
+							<select>
+								<option>Public</option>
+								<option>Private</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group action-button">
+						<button class="waves-effect waves-light btn custom-ok">Save</button>
+						<button class="waves-effect waves-light btn custom-no">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<ul id="slide-out" class="side-nav fixed z-depth-2">
+		<li class="center no-padding">
+			<div class="header_sidenav white-text">
+				<div class="row">
+					<img width="150" src="../../assets/images/admin/logo.png" class=" responsive-img" />  
+				</div>
+			</div>
+		</li>  
+		<li class="center no-padding">
+			<div class="profile clearfix mb15">
+				<img src="../../assets/images/admin/bg.jpg" alt="admin">
+				<div class="group">
+					<h5 class="name">Business Name</h5> 
+				</div>
+			</div>
+		</li>
+		<ul class="main_menu_navigation">
+			<li><a class="waves-effect" style="text-decoration: none;" href="business_dashboard.html"><i class="material-icons">tv</i> Dashboard</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_document.html"><i class="material-icons">folder_open</i> Documents</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_campaign.html"><i class="material-icons">domain</i> Campaigns</a></li>
+			<li id="menu_admin" > 
+				<a class="waves-effect collapse-menu" href="javascript:;"><i class="material-icons">settings</i> Settings</a>
+				<div class="collapsible_menu"> 
+					<a class="waves-effect" style="text-decoration: none;" href="business_setting.html">Business Settings</a><a class="waves-effect" style="text-decoration: none;" href="settlement.html">Settlement</a>
+				</div> 
+			</li> 
+		</ul>
+	</ul>
+	<header>
+		<nav class="site-head" role="navigation">
+			<div class="nav-wrapper">
+				<a href="javascript:;" class="toggle-sidenav"><span></span></a> 
+				<a data-activates="slide-out" class="button-collapse show-on-" href="#!"><img style="width: 150px;margin-left: 20px;margin-top: 13px;" src="../../assets/images/admin/logo.png" /></a>
+
+				<ul class="right hide-on-med-and-down">
+					<li class="nav-item dropdown">
+						<a class="nav-link count-indicator dropdown-toggle" href="#">
+							<i class="material-icons bell">notifications_none</i>
+							<span class="count">4</span>
+						</a> 
+					</li>
+					<li class="nav-item dropdown d-none d-xl-inline-block">
+						<a class="nav-link dropdown-toggle userDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+							<span class="profile-text">Hello, Henry!</span>
+							<img class="img-xs rounded-circle" src="../../assets/images/admin/default-user.png" alt="Profile image">
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<div class="dropdown-nav animated fadeInDown">
+							<ul>
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+			</div>
+		</nav>  
+	</header>
+	<main>
+		<div class="content_main">  
+			<div class="nav-wrapper">
+				<a style="margin-left: 10px;" class="breadcrumb" href="#!">Documents</a> 
+			</div><div class="row">
+				<div class="col s3">
+					<div class="card card-statistics">
+						<div class="card-body">
+							<div class="clearfix">
+								<div class="float-left">
+									<i class="material-icons text-danger icon-lg">description</i>
+								</div>
+								<div class="float-right">
+									<p class="mb-0 text-right">Documents</p>
+									<div class="fluid-container">
+										<h3 class="font-weight-medium text-right mb-0">60</h3>
+									</div>
+								</div>
+							</div> 
+						</div>
+					</div>
+				</div> 
+			</div>
+			<div class="row">  
+				<div class="col s12">
+					<a href="business_upload_document.html" class="waves-effect waves-light btn gd-submit" style="margin-bottom: 15px;float: right;/* box-shadow: none; */">Add New Document</a>
+					<table class="table table-bordered table-upload-doc" style="background: #fff">
+						<thead>
+							<tr>
+								<th class="col-sm-4">Name</th>
+								<th>Create Date</th>
+								<th>Status</th>
+								<th class="col-sm-1 text-center">Action</th> 
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="ng-binding">Document name</td>
+								<td class="small ng-binding">20/10/2018</td> 
+								<td class="ng-binding">Public</td>
+								<td class="text-center">
+									<div class="action-fl">
+										<a href="#">Add Question</a>
+										<a href="javascript:;" class="edit-file">Edit</a> 
+										<a href="javascript:;" class="delete-file">Delete</a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table> 
+				</div> 
+			</div> 
+		</div>
+	</main>
+	<footer class="man-utd-black page-footer" style="background: #1a1a1a;padding-top: 0">
+		<div class="footer-copyright">
+			<div class="container" style="text-align: center;">
+				<span>&copy; Copyright docvendor 2018</span>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/main_admin.js"></script>
+	<script>
+		$('.delete-file').click(function() {
+			$('.modal-delete').show();
+		});
+		$('.modal-delete button').click(function() {
+			$('.modal-delete').hide();
+		});
+		$('.edit-file').click(function() {
+			$('.modal-edit').show();
+		});
+		$('.modal-edit button').click(function() {
+			$('.modal-edit').hide();
+		});
+	</script>   
+</body>
+</html>

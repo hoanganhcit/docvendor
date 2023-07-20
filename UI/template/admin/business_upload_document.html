@@ -1,0 +1,166 @@
+<html>
+<link rel="icon" href="images/favicon.png" sizes="16x16">
+<head>
+	<meta charset="utf-8">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="../../assets/css/animate.css">  
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-materialize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin-styles.css"> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+</head>
+<body>
+	<ul id="slide-out" class="side-nav fixed z-depth-2">
+		<li class="center no-padding">
+			<div class="header_sidenav white-text">
+				<div class="row">
+					<img width="150" src="../../assets/images/admin/logo.png" class=" responsive-img" />  
+				</div>
+			</div>
+		</li>  
+		<li class="center no-padding">
+			<div class="profile clearfix mb15">
+				<img src="../../assets/images/admin/bg.jpg" alt="admin">
+				<div class="group">
+					<h5 class="name">Business Name</h5> 
+				</div>
+			</div>
+		</li>
+		<ul class="collapsible main_menu_navigation" data-collapsible="accordion">
+			<li><a class="waves-effect" style="text-decoration: none;" href="business_dashboard.html"><i class="material-icons">tv</i> Dashboard</a></li>
+			<li class="active" id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_document.html"><i class="material-icons">folder_open</i> Documents</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_campaign.html"><i class="material-icons">domain</i> Campaigns</a></li>
+			<li id="menu_admin"><a class="waves-effect" style="text-decoration: none;" href="business_setting.html"><i class="material-icons">settings</i> Settings</a></li> 
+		</ul>
+	</ul>
+	<header>
+		<nav class="site-head" role="navigation">
+			<div class="nav-wrapper">
+				<a href="javascript:;" class="toggle-sidenav"><span></span></a> 
+				<a data-activates="slide-out" class="button-collapse show-on-" href="#!"><img style="width: 150px;margin-left: 20px;margin-top: 13px;" src="../../assets/images/admin/logo.png" /></a>
+
+				<ul class="right hide-on-med-and-down">
+					<li class="nav-item dropdown">
+						<a class="nav-link count-indicator dropdown-toggle" href="#">
+							<i class="material-icons bell">notifications_none</i>
+							<span class="count">4</span>
+						</a> 
+					</li>
+					<li class="nav-item dropdown d-none d-xl-inline-block">
+						<a class="nav-link dropdown-toggle userDropdown" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+							<span class="profile-text">Hello, Henry!</span>
+							<img class="img-xs rounded-circle" src="../../assets/images/admin/default-user.png" alt="Profile image">
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<div class="dropdown-nav animated fadeInDown">
+							<ul>
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+
+
+				<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+			</div>
+		</nav>  
+	</header>
+	<main>
+		<div class="content_main">  
+			<div class="nav-wrapper">
+				<a style="margin-left: 20px;" class="breadcrumb" href="#!">Business</a>
+				<a class="breadcrumb" href="#!">Upload Document</a>
+				<div style="margin-right: 20px;" id="timestamp" class="right"></div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<div class="mb20 alert alert-info">
+						<strong>Note:</strong><span> Cần upload file của bạn rồi sẽ tiếp tục thực hiện tiến trình công việc.
+						</span>
+					</div>
+				</div> 
+				<div class="row">  
+					<form>
+						<div class="col s5 ">
+							<div class="dropzone"> 
+								<div class="drop-info">
+									<i class="material-icons">cloud_upload</i>
+									<h3 class="mt0 text-bold">Upload Document</h3>
+									<p>Drag files to upload <strong class="text-muted">(or click)</strong></p>
+								</div>
+								<input type="file" multiple="multiple">
+							</div> 
+							<div class="card-flex">
+								<table class="table table-bordered table-upload-doc" style="background: #fff">
+									<thead>
+										<tr>
+											<th class="col-sm-4">Name</th>
+											<th>Size</th> 
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-bold ng-binding">default-user.png</td>
+											<td class="small ng-binding">3,654 B</td> 
+										</tr>
+									</tbody>
+								</table> 
+							</div>
+						</div> 
+						<div class="col s7">
+							<div class="card create-form p2r"> 
+								<div class="form" style="flex-direction: column;">
+									<div class="card-flex">
+										<div class="label">Document Name</div>
+										<input type="text" class="input" name="">
+									</div>  
+									<div class="card-flex">
+										<div class="label">Description</div>
+										<textarea></textarea>
+									</div> 
+									<div class="card-flex">
+										<p class="click_thumb" data-id="">
+											<label>
+												<input type="checkbox" />
+												<span>Collect online payment</span>
+											</label>
+										</p>  
+									</div> 
+									<div class="collect-p">
+										<div class="label">Price</div>
+										<input type="text" class="input" name="" style="width: 30% !important">
+									</div>  
+								</div> 
+							</div> 
+						</div>
+						<div class="col s12">
+							<div style="text-align: right;">
+								<button class="waves-effect waves-light btn gd-submit" style="margin-top: 15px">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div> 
+			</div> 
+		</div>
+	</main>
+	<footer class="man-utd-black page-footer" style="background: #1a1a1a;padding-top: 0">
+		<div class="footer-copyright">
+			<div class="container" style="text-align: center;">
+				<span>&copy; Copyright docvendor 2018</span>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/materialize.min.js"></script> 
+	<script type="text/javascript" src="../../assets/js/main_admin.js"></script> 
+	<script> 
+		$(document).ready(function() { 
+			$('.click_thumb').click(function(){
+				$('.collect-p').addClass('c_selected');
+			});  
+		}); 
+  	</script>
+</body>
+</html>
