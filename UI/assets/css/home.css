@@ -7186,4 +7186,7 @@ img {
     font-size: 40px;
       line-height: 50px;
   }
+  .row .col.s6 {
+    width: 100%;
+  }
 }
