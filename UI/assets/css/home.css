@@ -2439,11 +2439,6 @@ p.phone_nb {
   background-color: #45b7de !important;
 }
 
-@media screen and (max-width: 768px) {
-  .main-section_media .illustration-holder {
-    display:none;
-  }
-}
 @media screen and (max-width: 1100px) {
   .main-section_media .illustration-holder {
     padding: 0;
@@ -2456,7 +2451,8 @@ p.phone_nb {
   }
   .fullheight {
     width: 100% !important;
-    margin: 0;
+    margin: 0 !important;
+    padding-top: 0;
   }
   .main-section_intro .headline {
     padding: 5rem 10rem;
@@ -2483,7 +2479,18 @@ p.phone_nb {
 }
 @media only screen and (max-width: 768px) {
   .main-section_intro .headline {
-    padding: 5rem;
+    padding: 0;
+    margin-bottom: 5rem;
+  }
+  .box-content {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .identity-image {
+    width: 100% !important;
+  }
+  .identity-image img {
+    width: 100% !important;
   }
   .fp-auto-height-responsive {
     height: 100% !important;
@@ -7169,4 +7176,14 @@ img {
   background-image: url(../images/user/bg/bg-heading.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .main-section_media .illustration-holder {
+    display:none;
+  }
+  .section-heading h2 {
+    font-size: 40px;
+      line-height: 50px;
+  }
 }
