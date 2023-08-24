@@ -4364,7 +4364,7 @@ footer p {
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   min-height: 316px;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05); */
 }
 .services-block:hover {
   box-shadow: -1px 9px 18px 0px rgba(75,81,91,0.1);
@@ -6358,7 +6358,7 @@ section.service.pos-r.bg-effect.o-hidden {}
 }
 
 .hero-section-solution {
-  padding: 130px 0 120px;
+  padding: 130px 0 80px;
 }
 
 .hero-section-solution:before {
@@ -6368,8 +6368,6 @@ section.service.pos-r.bg-effect.o-hidden {}
 
 .hero-section-solution .container {
   margin: 0 auto;
-  padding-right: 16px;
-  padding-left: 16px;
   max-width: 1280px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -7189,4 +7187,168 @@ img {
   .row .col.s6 {
     width: 100%;
   }
+}
+.easy-steps-main-wrapper {
+  position: relative;
+}
+.easy-steps-main-wrapper .single-steps-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+  margin-bottom: 60px;
+  z-index: 1;
+}
+.easy-steps-main-wrapper .single-steps-area::after {
+  position: absolute;
+  top: 66%;
+  height: 80px;
+  left: 22px;
+  width: 1px;
+  background: #E3E3E3;
+  content: "";
+}
+.easy-steps-main-wrapper .single-steps-area .number {
+  position: absolute;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  left: 66%;
+  top: 5%;
+  background: linear-gradient(180deg, #E6E6E6 41.14%, white 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  z-index: -1;
+}
+.easy-steps-main-wrapper .single-steps-area .number.active {
+  background: linear-gradient(180deg, #34a7e6 12.56%, #f0f0f0 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.easy-steps-main-wrapper .single-steps-area .icon {
+  margin-top: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 4px;
+  font-size: 20px;
+}
+.easy-steps-main-wrapper .single-steps-area .info-wrapper .title {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  color: #083A5E;
+}
+.easy-steps-main-wrapper .single-steps-area .info-wrapper p.disc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #497696;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+.easy-steps-area-wrapper {
+  background: #f6f6f6;
+  padding: 50px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 2rem;
+}
+.info-wrapper {
+  width: calc(100% - 45px);
+}
+.easy-steps-main-wrapper .single-steps-area .icon.bg-success {
+    background: #cbf3e7;
+    color: #06996d;
+}
+
+.easy-steps-main-wrapper .single-steps-area .icon.bg-primary {
+    background: #beebff;
+    color: #30b5f1;
+}
+
+.easy-steps-main-wrapper .single-steps-area .icon.bg-info {
+    background: #f8ccff;
+    color: #c71be5;
+}
+
+.easy-steps-main-wrapper .single-steps-area .icon.bg-warning {
+    background: #ffebc6;
+    color: orange;
+}
+.right-image-steps {
+  text-align: center;
+}
+.thumbnail-three {
+  background: #f3f6ff;
+  border-radius: 20px;
+}
+.content-main-wrapper-three {
+  padding-left: 50px;
+}
+.content-main-wrapper-three .title {
+  margin-bottom: 20px;
+  font-size: 50px;
+  line-height: 64px;
+  font-weight: bold;
+  color: #2c2c2c;
+  margin-top: 0;
+}
+
+.content-main-wrapper-three .section-subtitle {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.cta-list__item {
+  display: flex;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 20px;
+}
+
+.cta-list__logo {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: #f6f6f6;
+  font-size: 18px;
+}
+
+.cta-list__description {
+  width: calc(100% - 70px);
+  position: relative;
+  font-size: 16px;
+}
+
+.cta-list__description strong {
+  color: #000;
+}
+.bg-blue-5 {
+  background: #5fb6ca; 
+}
+.bg-orange-5 {
+  background: #ffc107; 
+}
+.bg-red-5 {
+  background: #ff756b; 
+}
+.bg-green-5 {
+  background: #81b544; 
+}
+.text-white {
+  color: #fff;
 }
