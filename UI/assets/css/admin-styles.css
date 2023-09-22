@@ -1270,6 +1270,8 @@ main, footer, .side-nav {
 
 .card-statistics .card-body {
     padding: 1.88rem 1.81rem;
+    width: 100%;
+    color: #fff;
 }
 
 .db-wiget {
@@ -3221,4 +3223,33 @@ a.add_options_checkbox i {
 .q-e-rv span {
     font-size: 13px;
     margin-right: 5px;
+}
+
+a.cp-add-document {
+    display: block;
+    float: right;
+    background: tomato;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+.full-width {
+    width: 100%;
+}
+
+.border-0 {border: 0;outline: none;}
+
+.align-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
 }
